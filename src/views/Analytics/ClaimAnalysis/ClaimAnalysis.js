@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Card, CardTitle, CardBody, Label, Input } from 'reactstrap'
 import * as Icons from 'react-feather'
+import Avatar from '@components/avatar'
 import ClaimAnalysisOne from './Data/ClaimAnalysisOne'
 import ClaimAnalysisTwo from './Data/ClaimAnalysisTwo'
 import ClaimAnalysisThree from './Data/ClaimAnalysisThree'
@@ -27,13 +28,15 @@ function ClaimAnalysis(props) {
                                 <Col md='6' sm='12'>
                                     <div className='bg-light-primary' style={{ width: 200, borderRadius: 50, marginTop: 20, marginLeft: 250 }}>
                                         <Icons.ChevronLeft style={{ paddingRight: 5, cursor: 'pointer' }} />
-                                        <small
+                                        {/* <small
                                             className={active === 'one' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
                                             style={{ paddingLeft: 15, paddingRight: 15, cursor: 'pointer' }}
                                             onClick={() => setActive('one')}
                                         >
                                             1
-                                        </small>
+                                        </small> */}
+
+                                        <Avatar onClick={() => setActive('one')} color={active === 'one' ? 'primary' : ''} content='1' style={{ marginRight: 12, padding: 0 }} />
 
                                         <small
                                             className={active === 'two' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
