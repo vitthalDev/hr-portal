@@ -59,6 +59,11 @@ const DashboardRoutes = [
   {
     path: '/dashboard/analytics',
     component: lazy(() => import('../../views/Analytics/Analytics'))
+  },
+  {
+    path: '/dashboard/claims',
+    component: lazy(() => import('../../views/Claims/Claims')),
+    exact: true
   }
 ]
 

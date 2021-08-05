@@ -198,7 +198,7 @@ const CustomMenu = props => {
               }}
               className={activeClaims ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='#' style={{ color: activeClaims ? 'white' : 'black' }}>
+              <Link to='/dashboard/claims' style={{ color: activeClaims ? 'white' : 'black' }}>
                 <Icon.FilePlus size={20} style={{ marginRight: 15 }} />
                 <span style={{ marginInlineEnd: 50 }}>Claims</span>
               </Link>
