@@ -49,6 +49,7 @@ const VerticalMenuHeader = props => {
             <span className='brand-logo'>
               {/* <img src={logo} alt='logo' style={{ height: 40, width: 120, marginBottom: 20, marginLeft: 20 }} />
               <img src={logo} style={{ height: 40, width: 120, marginBottom: 20, marginLeft: 20 }} /> */}
+
             </span>
             {/* <h2 className='brand-text mb-0'>{themeConfig.app.appName}</h2> */}
           </NavLink>

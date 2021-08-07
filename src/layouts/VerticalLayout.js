@@ -12,9 +12,13 @@ const VerticalLayout = props => (
   // navbar={props => <CustomNavbar {...props} />}
   // footer={props => <CustomFooter {...props} />}
   // {...props}
+    //   menu={props => <CustomMenu {...props} />}
+    //   navbar={props => <CustomNavbar {...props} />}
+    //   footer={props => <CustomFooter {...props} />}
+    {...props}
   >
     {props.children}
-  </Layout>
+  </Layout >
 )
 
 export default VerticalLayout
