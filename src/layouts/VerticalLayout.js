@@ -8,6 +8,10 @@ import Layout from '@layouts/VerticalLayout'
 
 const VerticalLayout = props => (
   <Layout
+  // menu={props => <CustomMenu {...props} />}
+  // navbar={props => <CustomNavbar {...props} />}
+  // footer={props => <CustomFooter {...props} />}
+  // {...props}
     //   menu={props => <CustomMenu {...props} />}
     //   navbar={props => <CustomNavbar {...props} />}
     //   footer={props => <CustomFooter {...props} />}
