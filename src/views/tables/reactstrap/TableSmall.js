@@ -115,7 +115,7 @@ const TableSmall = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Media>
               <Avatar img={avatar1} />
@@ -141,7 +141,7 @@ const TableSmall = () => {
             Cardiac Arrest
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Media>
               <Avatar img={avatar2} />
@@ -167,7 +167,7 @@ const TableSmall = () => {
             Fever
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Media>
               <Avatar img={avatar3} />
@@ -193,7 +193,7 @@ const TableSmall = () => {
             Malaria
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Media>
               <Avatar img={avatar4} />
@@ -219,7 +219,7 @@ const TableSmall = () => {
             Fever
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Media>
               <Avatar img={avatar5} />
@@ -245,7 +245,7 @@ const TableSmall = () => {
             Cardiac Arrest
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 40 }}>
           <td>
             <Media>
               <Avatar img={avatar6} />
