@@ -34,12 +34,7 @@ const ThemeNavbar = props => {
     <Fragment>
       <div className='bookmark-wrapper d-flex align-items-center'>
         <NavbarBookmarks setMenuVisibility={setMenuVisibility} />
-        {/* <Input className='bg-light-primary' style={{ borderRadius: 50 }} type='text' placeholder='Search...' setMenuVisibility={setMenuVisibility} />
-        <Row>
-          <Col md='12' sm='12'>
-            <Input className='bg-light-primary' style={{ borderRadius: 50 }} type='text' placeholder='Search...' />
-          </Col>
-        </Row> */}
+
       </div>
       <ul className='nav navbar-nav align-items-center ml-auto'>
         {/* <IntlDropdown />
