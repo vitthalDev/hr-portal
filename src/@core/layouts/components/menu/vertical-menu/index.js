@@ -3,6 +3,7 @@ import { Fragment, useState, useRef } from 'react'
 
 // ** Vertical Menu Items Array
 import navigation from '@src/navigation/vertical'
+import Menu from '../../../../../layouts/components/Menu'
 
 // ** Third Party Components
 import classnames from 'classnames'
@@ -73,7 +74,7 @@ const Sidebar = props => {
               onScrollY={container => scrollMenu(container)}
             >
               <ul className='navigation navigation-main'>
-                <VerticalNavMenuItems
+                {/* <VerticalNavMenuItems
                   items={navigation}
                   groupActive={groupActive}
                   setGroupActive={setGroupActive}
@@ -85,7 +86,8 @@ const Sidebar = props => {
                   menuCollapsed={menuCollapsed}
                   menuHover={menuHover}
                   currentActiveItem={currentActiveItem}
-                />
+                /> */}
+                <Menu />
               </ul>
             </PerfectScrollbar>
           </Fragment>
