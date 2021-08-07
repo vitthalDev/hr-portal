@@ -13,7 +13,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  InputGroup, InputGroupAddon, InputGroupText, Input
 } from 'reactstrap'
 
 // ** Store & Actions
@@ -50,6 +51,9 @@ const NavbarBookmarks = props => {
                 <UncontrolledTooltip target={item.target}>{item.title}</UncontrolledTooltip>
               </NavLink>
             </NavItem>
+            // <>
+
+            // </>
           )
         })
         .slice(0, 10)
@@ -84,6 +88,9 @@ const NavbarBookmarks = props => {
             </UncontrolledDropdown>
           </NavLink>
         </NavItem>
+        // <>
+
+        // </>
       )
     } else {
       return null
@@ -145,11 +152,22 @@ const NavbarBookmarks = props => {
         </NavItem>
       </ul>
       <ul className='nav navbar-nav bookmark-icons'>
-        {renderBookmarks()}
-        {renderExtraBookmarksDropdown()}
+        {/* {renderBookmarks()}
+        {renderExtraBookmarksDropdown()} */}
         <NavItem className='nav-item d-none d-lg-block'>
-          <NavLink className='bookmark-star' onClick={handleBookmarkVisibility}>
+          {/* <NavLink className='bookmark-star' onClick={handleBookmarkVisibility}>
             <Icon.Star className='ficon text-warning' />
+          </NavLink> */}
+          <NavLink className='bookmark-star'>
+            {/* <Icon.Search className='ficon text-secondary' /> */}
+            <InputGroup className='input-group-merge mb-0'>
+              <InputGroupAddon addonType='prepend'  >
+                <InputGroupText>
+                  <Icon.Search size={14} />
+                </InputGroupText>
+              </InputGroupAddon>
+              <Input placeholder='Type in to search...' />
+            </InputGroup>
           </NavLink>
           <div className={classnames('bookmark-input search-input', { show: openSearch })}>
             <div className='bookmark-input-icon'>
