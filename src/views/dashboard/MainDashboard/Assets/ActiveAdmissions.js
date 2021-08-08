@@ -98,7 +98,7 @@ const ActiveAdmissions = () => {
         <Card>
             <CardHeader>
                 <div>
-                    <CardTitle className='mb-75' tag='h4'>
+                    <CardTitle className='mb-75' tag='h4' style={{ color: '#645E78' }}>
                         Active Admissions
                     </CardTitle>
                 </div>

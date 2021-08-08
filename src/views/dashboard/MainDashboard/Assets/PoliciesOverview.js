@@ -102,28 +102,31 @@ const PoliciesOverview = props => {
         <Card>
             <CardHeader className='align-items-start'>
                 <Row>
-                    <Col md='3'>
-                        <CardTitle className='mb-25' tag='h4'>
+                    {/* <Col md='3'>
+                        <CardTitle className='font-weight-medium' tag='h4' style={{ marginRight: 10 }}>
                             Policy Usage
                         </CardTitle>
-                    </Col>
+                    </Col> */}
 
-                    <Col md='9'>
+                    <Col md='12'>
                         <div className='d-flex align-items-center' style={{ marginLeft: 100 }}>
+                            <div style={{ paddingRight: 100, marginLeft: -100 }}>
+                                <span>Policy Usage</span>
+                            </div>
                             <div className='d-flex align-items-center mr-2'>
                                 <span className='bullet bullet-info mr-50 cursor-pointer'></span>
-                                <span>Family Floater Plan</span>
+                                <span className='font-weight-light' style={{ fontSize: 10 }}>Family Floater Plan</span>
                             </div>
                             <div className='d-flex align-items-center'>
                                 <span className='bullet bullet-success mr-50 cursor-pointer'></span>
-                                <span>Joint Health Insurance</span>
+                                <span className='font-weight-light' style={{ fontSize: 10 }}>Joint Health Insurance</span>
                             </div>
                         </div>
                     </Col>
                 </Row>
             </CardHeader>
             <CardBody className='pb-0'>
-                <Chart options={options} series={series} type='line' height={240} />
+                <Chart options={options} series={series} type='line' height={300} />
             </CardBody>
         </Card>
     )
