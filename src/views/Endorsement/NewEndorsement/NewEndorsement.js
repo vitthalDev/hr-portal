@@ -13,7 +13,6 @@ function NewEndorsement(props) {
                 <Row>
                     <Col>
                         <UnpaidEndorsementDetail />
-                        {/* <h1>dsjddfh</h1> */}
                     </Col>
                 </Row>
                 <Row>

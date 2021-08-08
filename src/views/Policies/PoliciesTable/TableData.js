@@ -3,6 +3,8 @@ import { Table, Badge } from 'reactstrap'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
 import { useSkin } from '@hooks/useSkin'
 import { Download } from 'react-feather'
+import Avatar from '@components/avatar'
+import { Link } from "react-router-dom"
 
 const PoliciesTableData = () => {
     const { colors } = useContext(ThemeColors)
@@ -23,10 +25,10 @@ const PoliciesTableData = () => {
             <tbody>
                 <tr>
                     <td>
-                        <span className='bg-light-primary btn-icon rounded-circle' style={{ padding: 12 }}>
-                            F
-                        </span>
-                        <small className='p-1'><u>Family Floater Plan</u></small>
+                        <Link to='/policies/plandetails' style={{ color: '#625F6E' }}>
+                            <Avatar color='primary' content='F' style={{ marginRight: 12, padding: 2 }} />
+                            <small className='p-1'><u>Family Floater Plan</u></small>
+                        </Link>
                     </td>
                     <td><samp>112</samp></td>
                     <td>Health Cover</td>
@@ -36,9 +38,7 @@ const PoliciesTableData = () => {
                 </tr>
                 <tr>
                     <td>
-                        <span className='bg-light-warning btn-icon rounded-circle' style={{ padding: 12 }}>
-                            A
-                        </span>
+                        <Avatar color='warning' content='A' style={{ marginRight: 12, padding: 2 }} />
                         <small className='p-1'><u>Add-On Health</u></small>
                     </td>
                     <td><samp>130</samp></td>
@@ -49,9 +49,7 @@ const PoliciesTableData = () => {
                 </tr>
                 <tr>
                     <td>
-                        <span className='bg-light-danger btn-icon rounded-circle' style={{ padding: 12 }}>
-                            J
-                        </span>
+                        <Avatar color='danger' content='J' style={{ marginRight: 12, padding: 2 }} />
                         <small className='p-1'><u>Joint Health Insurance</u></small>
                     </td>
                     <td><samp>12</samp></td>
@@ -62,9 +60,7 @@ const PoliciesTableData = () => {
                 </tr>
                 <tr>
                     <td>
-                        <span className='bg-light-primary btn-icon rounded-circle' style={{ padding: 12 }}>
-                            C
-                        </span>
+                        <Avatar color='primary' content='C' style={{ marginRight: 12, padding: 2 }} />
                         <small className='p-1'><u>Critical Illness Plan</u></small>
                     </td>
                     <td><samp>02</samp></td>
@@ -75,9 +71,7 @@ const PoliciesTableData = () => {
                 </tr>
                 <tr>
                     <td>
-                        <span className='bg-light-success btn-icon rounded-circle' style={{ padding: 12 }}>
-                            I
-                        </span>
+                        <Avatar color='success' content='G' style={{ marginRight: 12, padding: 2 }} />
                         <small className='p-1'><u>Group Health Insurance</u></small>
                     </td>
                     <td><samp>14</samp></td>
@@ -88,9 +82,7 @@ const PoliciesTableData = () => {
                 </tr>
                 <tr>
                     <td>
-                        <span className='bg-light-danger btn-icon rounded-circle' style={{ padding: 12 }}>
-                            G
-                        </span>
+                        <Avatar color='danger' content='G' style={{ marginRight: 12, padding: 2 }} />
                         <small className='p-1'><u>Group Health Insurance</u></small>
                     </td>
                     <td><samp>112</samp></td>

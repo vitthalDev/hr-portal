@@ -34,132 +34,134 @@ function ActiveAdmissions() {
         <>
             <Row>
                 <Col md='12' sm='12'>
-                    <Table size='sm' responsive>
-                        <thead>
-                            <tr>
-                                <th style={{ fontSize: 8 }}>EMPLOYEE NAME</th>
-                                <th style={{ fontSize: 8 }}>HOSPITAL NAME</th>
-                                <th style={{ fontSize: 8 }} >DESIGNATION</th>
-                                <th style={{ fontSize: 8 }}>ADMISSION DATE</th>
-                                <th style={{ fontSize: 8 }}>ESTIMATED DISCHARGE DATE</th>
-                                <th style={{ fontSize: 8 }}>REASON OF ADMISSION</th>
-                                <th style={{ fontSize: 8 }}>STATUS</th>
-                                <th style={{ fontSize: 8 }}>CLAIM FORM</th>
-                                <th style={{ fontSize: 8 }}>PRE-AUTH</th>
-                                <th style={{ fontSize: 8 }}>CLAIM DOCUMENT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
-                                    Rahul Saxena
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>Manager</td>
-                                <td style={{ fontSize: 12 }}>20 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>24 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>malaria</td>
-                                <td><Info size={20} style={{ cursor: 'pointer' }} onClick={() => setShowClaimStatus(!showClaimStatus)} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='info' pill>Issued</Badge></td>
-                                <td style={{ cursor: 'pointer' }} onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}><File size={20} /></td>
-                            </tr>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
-                                    Nikhil D
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>tax Consultant</td>
-                                <td style={{ fontSize: 12 }}>02 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>22 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
-                                <td><Info size={20} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='danger' pill>In-procs</Badge></td>
-                                <td><File size={20} /></td>
-                            </tr>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
-                                    Anjali Saxena
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Manpada Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>Developer</td>
-                                <td style={{ fontSize: 12 }}>21 Feb 2021</td>
-                                <td style={{ fontSize: 12 }}>24 Mar 2021</td>
-                                <td style={{ fontSize: 12 }}>Fever</td>
-                                <td><Info size={20} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='info' pill>Issued</Badge></td>
-                                <td><File size={20} /></td>
-                            </tr>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
-                                    Rahul Saxena
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>Manager</td>
-                                <td style={{ fontSize: 12 }}>20 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>24 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>malaria</td>
-                                <td><Info size={20} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='info' pill>Issued</Badge></td>
-                                <td><File size={20} /></td>
-                            </tr>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
-                                    Nikhil D
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>tax Consultant</td>
-                                <td style={{ fontSize: 12 }}>02 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>22 Jan 2021</td>
-                                <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
-                                <td><Info size={20} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='danger' pill>In-procs</Badge></td>
-                                <td><File size={20} /></td>
-                            </tr>
-                            <tr>
-                                <td style={{ width: 140, fontSize: 12 }}>
-                                    <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
-                                    Anjali Saxena
-                                </td>
-                                <td style={{ width: 250 }}>
-                                    <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
-                                    <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
-                                </td>
-                                <td style={{ fontSize: 12 }}>Developer</td>
-                                <td style={{ fontSize: 12 }}>21 Feb 2021</td>
-                                <td style={{ fontSize: 12 }}>24 Mar 2021</td>
-                                <td style={{ fontSize: 12 }}>Fever</td>
-                                <td><Info size={20} /></td>
-                                <td><Download size={20} /></td>
-                                <td><Badge color='info' pill>Issued</Badge></td>
-                                <td><File size={20} /></td>
-                            </tr>
-                        </tbody>
-                    </Table>
+                    <Card>
+                        <Table size='sm' responsive>
+                            <thead>
+                                <tr className='text-center'>
+                                    <th style={{ fontSize: 10, height: 50 }}>EMPLOYEE NAME</th>
+                                    <th style={{ fontSize: 10 }}>HOSPITAL NAME</th>
+                                    <th style={{ fontSize: 10 }} >DESIGNATION</th>
+                                    <th style={{ fontSize: 10 }}>ADMISSION DATE</th>
+                                    <th style={{ fontSize: 10 }}>ESTIMATED DISCHARGE DATE</th>
+                                    <th style={{ fontSize: 10 }}>REASON OF ADMISSION</th>
+                                    <th style={{ fontSize: 10 }}>STATUS</th>
+                                    <th style={{ fontSize: 10 }}>CLAIM FORM</th>
+                                    <th style={{ fontSize: 10 }}>PRE-AUTH</th>
+                                    <th style={{ fontSize: 10 }}>CLAIM DOCUMENT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
+                                        Rahul Saxena
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>Manager</td>
+                                    <td style={{ fontSize: 12 }}>20 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>24 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>malaria</td>
+                                    <td><Info className='bg-primary' size={20} style={{ cursor: 'pointer', color: 'white', borderRadius: 50 }} onClick={() => setShowClaimStatus(!showClaimStatus)} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='info' pill>Issued</Badge></td>
+                                    <td style={{ cursor: 'pointer' }} onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}><File size={20} /></td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
+                                        Nikhil D
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>tax Consultant</td>
+                                    <td style={{ fontSize: 12 }}>02 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>22 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
+                                    <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='danger' pill>In-procs</Badge></td>
+                                    <td><File size={20} /></td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
+                                        Anjali Saxena
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Manpada Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>Developer</td>
+                                    <td style={{ fontSize: 12 }}>21 Feb 2021</td>
+                                    <td style={{ fontSize: 12 }}>24 Mar 2021</td>
+                                    <td style={{ fontSize: 12 }}>Fever</td>
+                                    <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='info' pill>Issued</Badge></td>
+                                    <td><File size={20} /></td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
+                                        Rahul Saxena
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>Manager</td>
+                                    <td style={{ fontSize: 12 }}>20 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>24 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>malaria</td>
+                                    <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='info' pill>Issued</Badge></td>
+                                    <td><File size={20} /></td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
+                                        Nikhil D
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>tax Consultant</td>
+                                    <td style={{ fontSize: 12 }}>02 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>22 Jan 2021</td>
+                                    <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
+                                    <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='danger' pill>In-procs</Badge></td>
+                                    <td><File size={20} /></td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td style={{ width: 140, fontSize: 12 }}>
+                                        <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
+                                        Anjali Saxena
+                                    </td>
+                                    <td style={{ width: 250 }}>
+                                        <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
+                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                    </td>
+                                    <td style={{ fontSize: 12 }}>Developer</td>
+                                    <td style={{ fontSize: 12 }}>21 Feb 2021</td>
+                                    <td style={{ fontSize: 12 }}>24 Mar 2021</td>
+                                    <td style={{ fontSize: 12 }}>Fever</td>
+                                    <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
+                                    <td><Download size={20} /></td>
+                                    <td><Badge color='info' pill>Issued</Badge></td>
+                                    <td><File size={20} /></td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </Card>
                 </Col>
             </Row>
 

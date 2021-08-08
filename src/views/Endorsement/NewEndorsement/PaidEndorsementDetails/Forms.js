@@ -18,8 +18,15 @@ const Forms = ({ stepper, type }) => {
     return (
         <Fragment>
             <div className='content-header'>
-                <h5 className='mb-0'>Paid Endorsement Details</h5>
-                <small>Enter Your Paid Endorsement Details.</small>
+                <Row>
+                    <Col lg='9'>
+                        <h5>Paid Endorsement Details</h5>
+                        <small>Enter your paid endorsement details.</small>
+                    </Col>
+                    <Col lg='3'>
+                        <span>Policy No. E01677637</span>
+                    </Col>
+                </Row>
             </div>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Row>
@@ -53,17 +60,17 @@ const Forms = ({ stepper, type }) => {
                 </Row>
 
                 <div className='d-flex justify-content-between'>
-                    <Button.Ripple type='submit' color='warning' className='btn-next' style={{ marginLeft: 800 }}>
+                    {/* <Button.Ripple type='submit' color='warning' className='btn-next' style={{ marginLeft: 800 }}>
                         <span className='align-middle d-sm-inline-block d-none'>Save</span>
-                        {/* <ArrowRight size={14} className='align-middle ml-sm-25 ml-0'></ArrowRight> */}
-                    </Button.Ripple>
+                        {/* <ArrowRight size={14} className='align-middle ml-sm-25 ml-0'></ArrowRight> 
+                    </Button.Ripple> */}
                     <Button.Ripple type='submit' color='primary' className='btn-next'>
                         <span className='align-middle d-sm-inline-block d-none'>Next</span>
                         <ArrowRight size={14} className='align-middle ml-sm-25 ml-0'></ArrowRight>
                     </Button.Ripple>
                 </div>
             </Form>
-        </Fragment>
+        </Fragment >
     )
 }
 

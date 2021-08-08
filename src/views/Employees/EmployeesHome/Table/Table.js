@@ -14,6 +14,7 @@ import ReactPaginate from 'react-paginate'
 import { ChevronDown } from 'react-feather'
 import DataTable from 'react-data-table-component'
 import { Card, CardHeader, CardTitle, Input, Label, Row, Col, Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 const EmployeeTable = () => {
     // ** Store Vars
@@ -167,7 +168,9 @@ const EmployeeTable = () => {
                         />
                     </Col>
                     <Col sm='3'>
-                        <Button.Ripple color='primary'>New Endersoment</Button.Ripple>
+                        <Link to='/dashboard/employees/newuser'>
+                            <Button.Ripple color='primary'>New Endersoment</Button.Ripple>
+                        </Link>
                     </Col>
                 </Row>
                 {/* <DataTable

@@ -1,5 +1,5 @@
-import { React, useContext } from 'react'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, Table, Badge, Label, Input, Button } from 'reactstrap'
+import { React, useContext, useState } from 'react'
+import { Row, Col, Card, CardHeader, CardTitle, CardBody, Table, Badge, Label, Input, Form, FormGroup, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, CustomInput } from 'reactstrap'
 import { useRTL } from '@hooks/useRTL'
 import Avatar from '@components/avatar'
 import { MapPin, Info, Download, File, Circle } from 'react-feather'
@@ -7,7 +7,11 @@ import { ThemeColors } from '@src/utility/context/ThemeColors'
 import { useSkin } from '@hooks/useSkin'
 import CashlessVSRemClaims from './Assets/CashlessVSRemClaims'
 import TopBenefitsUtilized from './Assets/TopBenefitsUtilized'
+import ClaimStatus from '../ActiveAdmissions/Assets/ClaimStatus'
+
 function PastClaims(props) {
+    const [showClaimStatus, setShowClaimStatus] = useState(false)
+    const [showRequiredDocuments, setShowRequiredDocuments] = useState(false)
     const [isRtl, setIsRtl] = useRTL()
     const context = useContext(ThemeColors)
     const { colors } = useContext(ThemeColors),
@@ -91,21 +95,21 @@ function PastClaims(props) {
                         <CardBody>
                             <Table size='sm' responsive>
                                 <thead>
-                                    <tr>
-                                        <th style={{ fontSize: 8 }}>EMPLOYEE NAME</th>
-                                        <th style={{ fontSize: 8 }}>HOSPITAL NAME</th>
-                                        <th style={{ fontSize: 8 }} >DESIGNATION</th>
-                                        <th style={{ fontSize: 8 }}>ADMISSION DATE</th>
-                                        <th style={{ fontSize: 8 }}>ESTIMATED DISCHARGE DATE</th>
-                                        <th style={{ fontSize: 8 }}>REASON OF ADMISSION</th>
-                                        <th style={{ fontSize: 8 }}>STATUS</th>
-                                        <th style={{ fontSize: 8 }}>CLAIM FORM</th>
-                                        {/* <th style={{ fontSize: 8 }}>PRE-AUTH</th> */}
-                                        <th style={{ fontSize: 8 }}>CLAIM DOCUMENT</th>
+                                    <tr className='text-center'>
+                                        <th style={{ fontSize: 10, height: 50 }}>EMPLOYEE NAME</th>
+                                        <th style={{ fontSize: 10 }}>HOSPITAL NAME</th>
+                                        <th style={{ fontSize: 10 }} >DESIGNATION</th>
+                                        <th style={{ fontSize: 10 }}>ADMISSION DATE</th>
+                                        <th style={{ fontSize: 10 }}>ESTIMATED DISCHARGE DATE</th>
+                                        <th style={{ fontSize: 10 }}>REASON OF ADMISSION</th>
+                                        <th style={{ fontSize: 10 }}>STATUS</th>
+                                        <th style={{ fontSize: 10 }}>CLAIM FORM</th>
+                                        <th style={{ fontSize: 10 }}>PRE-AUTH</th>
+                                        <th style={{ fontSize: 10 }}>CLAIM DOCUMENT</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
                                             Rahul Saxena
@@ -118,12 +122,12 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>20 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>24 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>malaria</td>
-                                        <td><Info size={20} style={{ cursor: 'pointer' }} onClick={() => setShowClaimStatus(!showClaimStatus)} /></td>
+                                        <td><Info className='bg-primary' size={20} style={{ cursor: 'pointer', color: 'white', borderRadius: 50 }} onClick={() => setShowClaimStatus(!showClaimStatus)} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='info' pill>Issued</Badge></td> */}
-                                        <td><File size={20} /></td>
+                                        <td><Badge color='info' pill>Issued</Badge></td>
+                                        <td style={{ cursor: 'pointer' }} onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}><File size={20} /></td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
                                             Nikhil D
@@ -136,12 +140,12 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>02 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>22 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
-                                        <td><Info size={20} /></td>
+                                        <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='danger' pill>In-procs</Badge></td> */}
+                                        <td><Badge color='danger' pill>In-procs</Badge></td>
                                         <td><File size={20} /></td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
                                             Anjali Saxena
@@ -154,12 +158,12 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>21 Feb 2021</td>
                                         <td style={{ fontSize: 12 }}>24 Mar 2021</td>
                                         <td style={{ fontSize: 12 }}>Fever</td>
-                                        <td><Info size={20} /></td>
+                                        <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='info' pill>Issued</Badge></td> */}
+                                        <td><Badge color='info' pill>Issued</Badge></td>
                                         <td><File size={20} /></td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='success' content='R' style={{ marginRight: 5, padding: 0 }} />
                                             Rahul Saxena
@@ -172,12 +176,12 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>20 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>24 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>malaria</td>
-                                        <td><Info size={20} /></td>
+                                        <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='info' pill>Issued</Badge></td> */}
+                                        <td><Badge color='info' pill>Issued</Badge></td>
                                         <td><File size={20} /></td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='primary' content='N' style={{ marginRight: 5, padding: 0 }} />
                                             Nikhil D
@@ -190,12 +194,12 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>02 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>22 Jan 2021</td>
                                         <td style={{ fontSize: 12 }}>Cardiac Arrest</td>
-                                        <td><Info size={20} /></td>
+                                        <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='danger' pill>In-procs</Badge></td> */}
+                                        <td><Badge color='danger' pill>In-procs</Badge></td>
                                         <td><File size={20} /></td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 140, fontSize: 12 }}>
                                             <Avatar color='info' content='A' style={{ marginRight: 5, padding: 0 }} />
                                             Anjali Saxena
@@ -208,9 +212,9 @@ function PastClaims(props) {
                                         <td style={{ fontSize: 12 }}>21 Feb 2021</td>
                                         <td style={{ fontSize: 12 }}>24 Mar 2021</td>
                                         <td style={{ fontSize: 12 }}>Fever</td>
-                                        <td><Info size={20} /></td>
+                                        <td><Info className='bg-primary' style={{ color: 'white', borderRadius: 50 }} size={20} /></td>
                                         <td><Download size={20} /></td>
-                                        {/* <td><Badge color='info' pill>Issued</Badge></td> */}
+                                        <td><Badge color='info' pill>Issued</Badge></td>
                                         <td><File size={20} /></td>
                                     </tr>
                                 </tbody>
@@ -219,6 +223,66 @@ function PastClaims(props) {
                     </Card>
                 </Col>
             </Row>
+
+            <div>
+                <Modal isOpen={showClaimStatus} toggle={() => setShowClaimStatus(!showClaimStatus)} className='modal-dialog-centered'>
+                    <ModalHeader toggle={() => setShowClaimStatus(!showClaimStatus)}>Claim Status</ModalHeader>
+                    <ModalBody>
+                        <ClaimStatus />
+                    </ModalBody>
+                </Modal>
+            </div>
+
+            <div>
+                <Modal isOpen={showRequiredDocuments} toggle={() => setShowRequiredDocuments(!showRequiredDocuments)} className='modal-dialog-centered'>
+                    <ModalHeader toggle={() => setShowRequiredDocuments(!showRequiredDocuments)}>Documents Required</ModalHeader>
+                    <ModalBody>
+                        <Card>
+                            <CardBody>
+                                <Form>
+                                    <Row>
+                                        <Col md='6' sm='12'>
+                                            <FormGroup>
+                                                <Label for=''>Document 1</Label>
+                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                            </FormGroup>
+                                        </Col>
+                                        <Col md='6' sm='12'>
+                                            <FormGroup>
+                                                <Label for=''>Document 2</Label>
+                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col md='6' sm='12'>
+                                            <FormGroup>
+                                                <Label for=''>Document 3</Label>
+                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                            </FormGroup>
+                                        </Col>
+                                        <Col md='6' sm='12'>
+                                            <FormGroup>
+                                                <Label for=''>Document 4</Label>
+                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                            </FormGroup>
+                                        </Col>
+                                    </Row>
+                                </Form>
+                            </CardBody>
+                        </Card>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color='flat-primary' onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}>
+                            Cancel
+                        </Button>{' '}
+                        <Button color='flat-primary' onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}>
+                            Submit
+                        </Button>{' '}
+                    </ModalFooter>
+                </Modal>
+            </div>
+
         </>
     )
 }

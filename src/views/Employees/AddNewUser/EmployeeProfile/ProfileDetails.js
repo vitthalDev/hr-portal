@@ -133,8 +133,9 @@ import * as yup from 'yup'
 import { Fragment } from 'react'
 import classnames from 'classnames'
 import { isObjEmpty } from '@utils'
+import Avatar from '@components/avatar'
 import { useForm } from 'react-hook-form'
-import { ArrowLeft, ArrowRight } from 'react-feather'
+import { ArrowLeft, ArrowRight, User, Camera } from 'react-feather'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Form, Label, Input, FormGroup, Row, Col, Button } from 'reactstrap'
 
@@ -169,10 +170,18 @@ const ProfileDetails = ({ stepper, type }) => {
             </div>
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Row>
-                    <Col md='1'>
-
+                    <Col md='2'>
+                        <div className='avatar avatar-stats bg-light-secondary' style={{ padding: 35 }}>
+                            <User />
+                        </div>
+                        <div>
+                            <Avatar style={{ marginTop: -60, marginLeft: 60 }} color='primary' icon={<Camera size={14} />} />
+                        </div>
+                        <div className='pb-2'>
+                            upload image
+                        </div>
                     </Col>
-                    <Col md='11'>
+                    <Col md='10'>
                         <Row>
                             <FormGroup tag={Col} md='3'>
                                 <Label className='form-label' for={`firstname-${type}`}>

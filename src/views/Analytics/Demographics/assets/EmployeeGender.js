@@ -82,13 +82,13 @@ const GenderWiseSession = props => {
         <Card>
             <CardBody>
                 <Row>
-                    <Col md='6' sm='12' className='mt-2 pl-2'>
+                    <Col md='6' sm='12' className='mt-2 pl-5'>
                         <h6>Employes</h6>
                         <div>
-                            <Icon.Square size={15} color='#84D0FF' style={{ backgroundColor: '#84D0FF' }} /><span className='pr-1'>Male - 94%</span>
+                            <Icon.Square size={15} color='#84D0FF' style={{ backgroundColor: '#84D0FF' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>96%</span>
                         </div>
                         <div>
-                            <Icon.Square size={15} color='B2FFFF' style={{ backgroundColor: '#B2FFFF' }} /><span className='pr-1'>Female - 04%</span>
+                            <Icon.Square size={15} color='B2FFFF' style={{ backgroundColor: '#B2FFFF' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>04%</span>
                         </div>
                     </Col>
                     <Col md='6' sm='12'>

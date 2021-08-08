@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Card, CardTitle, CardBody, Label, Input } from 'reactstrap'
 import * as Icons from 'react-feather'
+import Avatar from '@components/avatar'
 import DemographicsOne from './Data/DemographicsOne'
 import DemographicsTwo from './Data/DemographicsTwo'
 import DemographicsThree from './Data/DemographicsThree'
@@ -20,44 +21,16 @@ function Demographics(props) {
                                     <Label for='policies'>Policies</Label>
                                     <Input type='select' name='policies' id='policies' />
                                 </Col>
-                                <Col md='2' sm='12'>
+                                <Col md='5' sm='12'>
 
                                 </Col>
-                                <Col md='6' sm='12'>
-                                    <div className='bg-light-primary' style={{ width: 200, borderRadius: 50, marginTop: 20, marginLeft: 250 }}>
-                                        <Icons.ChevronLeft style={{ paddingRight: 5, cursor: 'pointer' }} />
-                                        <small
-                                            className={active === 'one' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
-                                            style={{ paddingLeft: 15, paddingRight: 15, cursor: 'pointer' }}
-                                            onClick={() => setActive('one')}
-                                        >
-                                            1
-                                        </small>
-
-                                        <small
-                                            className={active === 'two' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
-                                            style={{ paddingLeft: 15, paddingRight: 15, cursor: 'pointer' }}
-                                            onClick={() => setActive('two')}
-                                        >
-                                            2
-                                        </small>
-
-                                        <small
-                                            className={active === 'three' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
-                                            style={{ paddingLeft: 15, paddingRight: 15, cursor: 'pointer' }}
-                                            onClick={() => setActive('three')}
-                                        >
-                                            3
-                                        </small>
-
-                                        <small
-                                            className={active === 'four' ? 'avatar avatar-stats p-50 m-0 bg-gradient-primary' : ''}
-                                            style={{ paddingLeft: 15, paddingRight: 15, cursor: 'pointer' }}
-                                            onClick={() => setActive('four')}
-                                        >
-                                            4
-                                        </small>
-                                        <Icons.ChevronRight style={{ paddingLeft: 5 }} />
+                                <Col md='3' sm='12'>
+                                    <div className='bg-light-primary' style={{ width: 170, borderRadius: 50, marginTop: 20 }}>
+                                        <Icons.ChevronLeft onClick={() => setActive('one')} style={{ paddingRight: 0, cursor: 'pointer' }} />
+                                        <Avatar onClick={() => setActive('one')} color={active === 'one' ? 'primary' : ''} content='1' style={{ marginRight: 12, padding: 0 }} />
+                                        <Avatar onClick={() => setActive('two')} color={active === 'two' ? 'primary' : ''} content='2' style={{ marginRight: 12, padding: 0 }} />
+                                        <Avatar onClick={() => setActive('three')} color={active === 'three' ? 'primary' : ''} content='3' style={{ marginRight: 12, padding: 0 }} />
+                                        <Icons.ChevronRight onClick={() => setActive('three')} style={{ marginLeft: -10, cursor: 'pointer' }} />
                                     </div>
                                 </Col>
                             </Row>

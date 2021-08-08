@@ -132,18 +132,7 @@ const data = [
 
 const ClaimStatus = () => {
     return (
-        <Card className='card-user-timeline'>
-            <CardHeader>
-                <div className='d-flex align-items-center'>
-                    <List className='user-timeline-title-icon' />
-                    <CardTitle tag='h4'>User Timeline</CardTitle>
-                </div>
-                <MoreVertical size={18} className='cursor-pointer' />
-            </CardHeader>
-            <CardBody>
-                <Timeline className='ml-50 mb-0' data={data} />
-            </CardBody>
-        </Card>
+        <Timeline className='ml-50 mb-0' data={data} />
     )
 }
 

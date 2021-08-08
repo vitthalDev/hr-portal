@@ -28,9 +28,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'dashboard' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard' style={{ color: active === 'dashboard' ? 'white' : 'black' }}>
+              <Link to='/dashboard' style={{ color: active === 'dashboard' ? 'white' : '#625F6E' }}>
                 <Grid />
-                <span style={{ color: '#625F6E' }}>Dashboard</span>
+                <span >Dashboard</span>
               </Link>
             </div>
           </NavLink>
@@ -41,9 +41,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'policies' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/policies' style={{ color: active === 'policies' ? 'white' : 'black' }}>
+              <Link to='/dashboard/policies' style={{ color: active === 'policies' ? 'white' : '#625F6E' }}>
                 <img src={insurance} height='25' width='20' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Policies</span>
+                <span style={{ paddingLeft: 5 }}>Policies</span>
               </Link>
             </div>
           </NavLink>
@@ -54,9 +54,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'endorsement' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/endorsement' style={{ color: active === 'endorsement' ? 'white' : 'black' }}>
+              <Link to='/dashboard/endorsement' style={{ color: active === 'endorsement' ? 'white' : '#625F6E' }}>
                 <img src={verify} height='25' width='25' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Endorsement</span>
+                <span style={{ paddingLeft: 5 }}>Endorsement</span>
               </Link>
             </div>
           </NavLink>
@@ -67,9 +67,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'employees' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/employees' style={{ color: active === 'employees' ? 'white' : 'black' }}>
+              <Link to='/dashboard/employees' style={{ color: active === 'employees' ? 'white' : '#625F6E' }}>
                 <img src={businessman} height='25' width='25' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Employees</span>
+                <span style={{ paddingLeft: 5 }}>Employees</span>
               </Link>
             </div>
           </NavLink>
@@ -80,9 +80,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'claims' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/claims' style={{ color: active === 'claims' ? 'white' : 'black' }}>
+              <Link to='/dashboard/claims' style={{ color: active === 'claims' ? 'white' : '#625F6E' }}>
                 <img src={claim} height='25' width='20' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Claims</span>
+                <span style={{ paddingLeft: 5 }}>Claims</span>
               </Link>
             </div>
           </NavLink>
@@ -93,9 +93,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'providers' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/providers' style={{ color: active === 'poviders' ? 'white' : 'black' }}>
+              <Link to='/dashboard/providers' style={{ color: active === 'providers' ? 'white' : '#625F6E' }}>
                 <img src={placeholder} height='25' width='20' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Providers</span>
+                <span style={{ paddingLeft: 5 }}>Providers</span>
               </Link>
             </div>
           </NavLink>
@@ -106,9 +106,9 @@ const Menu = props => {
               style={{ width: 200 }}
               className={active === 'analytics' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
-              <Link to='/dashboard/analytics' style={{ color: active === 'analytics' ? 'white' : 'black' }}>
+              <Link to='/dashboard/analytics' style={{ color: active === 'analytics' ? 'white' : '#625F6E' }}>
                 <img src={analytics} height='25' width='20' />
-                <span style={{ paddingLeft: 5, color: '#625F6E' }}>Analytics</span>
+                <span style={{ paddingLeft: 5 }}>Analytics</span>
               </Link>
             </div>
           </NavLink>

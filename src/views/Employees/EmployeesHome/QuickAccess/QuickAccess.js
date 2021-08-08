@@ -1,9 +1,11 @@
 import React from 'react'
 import { Row, Col, Card, CardBody } from 'reactstrap'
 import { Users, Archive, File, Download } from 'react-feather'
-import processOK from '@src/assets/images/icons/processOK.png'
-import verifiedChecked from '@src/assets/images/icons/verifiedChecked.png'
-import fileCancelled from '@src/assets/images/icons/fileCancelled.png'
+import Avatar from '@components/avatar'
+import group from '@src/assets/images/icons/group.png'
+import male3 from '@src/assets/images/icons/male3.png'
+import female3 from '@src/assets/images/icons/female3.png'
+import cloudDownload from '@src/assets/images/icons/cloudDownload.png'
 import hourSandCircle from '@src/assets/images/icons/hourSandCircle.png'
 
 function EmployeesQuickAccess(props) {
@@ -19,7 +21,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>Employees</p>
                                 </div>
                                 <div>
-                                    <img src={processOK} />
+                                    <img src={group} />
                                 </div>
                             </div>
                         </CardBody>
@@ -34,7 +36,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>Male</p>
                                 </div>
                                 <div>
-                                    <img src={verifiedChecked} />
+                                    <Avatar img={male3} />
                                 </div>
                             </div>
                         </CardBody>
@@ -49,7 +51,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>Female</p>
                                 </div>
                                 <div>
-                                    <img src={fileCancelled} />
+                                    <Avatar img={female3} />
                                 </div>
                             </div>
                         </CardBody>
@@ -63,8 +65,8 @@ function EmployeesQuickAccess(props) {
                                     <h2 className='font-weight-bolder mb-0'>136</h2>
                                     <p className='card-text'>E-Card Issued</p>
                                 </div>
-                                <div>
-                                    <img src={hourSandCircle} />
+                                <div className='avatar avatar-stats p-50 m-0 bg-light-success'>
+                                    <img src={cloudDownload} width='35' height='30' />
                                 </div>
                             </div>
                         </CardBody>

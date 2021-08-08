@@ -28,7 +28,7 @@ function ClaimAnalysisOne(props) {
                             <CardTitle tag='h6'>Status wise Claim Summary & Claim Ratios</CardTitle>
                         </CardHeader>
                         <CardBody>
-                            <Table size='lg' responsive>
+                            <Table size='sm' responsive>
                                 <thead>
                                     <tr>
                                         <th>CLAIM STATUS</th>
@@ -37,27 +37,27 @@ function ClaimAnalysisOne(props) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td>Settled</td>
                                         <td>20</td>
                                         <td>867,434</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td>Outstanding</td>
                                         <td>10</td>
                                         <td>457,578</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td>Cashless Receivedpending for settlement</td>
                                         <td>15</td>
                                         <td>557,383</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td>Rejected</td>
                                         <td>04</td>
                                         <td>84,484</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td>Grand Total</td>
                                         <td>52</td>
                                         <td>1,993,925</td>
@@ -72,7 +72,7 @@ function ClaimAnalysisOne(props) {
                 </Col>
                 <Col md='5' sm='12'>
                     <Card>
-                        <Table size='lg' responsive style={{ height: '90vh' }}>
+                        <Table size='lg' responsive style={{ height: '100vh' }}>
                             <thead>
                                 <tr>
                                     <th>PARTICULARS</th>
@@ -80,35 +80,35 @@ function ClaimAnalysisOne(props) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Data as on</td>
                                     <td>05 Aug 2015</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Policy Inseption Date</td>
                                     <td>01 MAy 2015</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Policy Expiry Date</td>
                                     <td>30 April 2016</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Total No. of Days from policy Inception</td>
                                     <td>96</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Total Claim Cost(Total Settled Amt + Total Claimed Amt for Outstanding)</td>
                                     <td>1,909,138</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Total Premium Paid Til DAte(Exclusive of Taxes)</td>
                                     <td>6,586,762</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>Earned Premium as on Date</td>
                                     <td>1,732,409</td>
                                 </tr>
-                                <tr>
+                                <tr style={{ height: 60 }}>
                                     <td>8End of Policy Claim Cost</td>
                                     <td>7,557,005</td>
                                 </tr>
