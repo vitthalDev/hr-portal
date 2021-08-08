@@ -72,7 +72,7 @@ function ClaimAnalysisOne(props) {
                 </Col>
                 <Col md='5' sm='12'>
                     <Card>
-                        <Table size='lg' responsive style={{ height: '100vh' }}>
+                        <Table size='lg' responsive style={{ height: 650 }}>
                             <thead>
                                 <tr>
                                     <th>PARTICULARS</th>

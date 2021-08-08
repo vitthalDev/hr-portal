@@ -28,7 +28,7 @@ function ClaimAnalysisThree(props) {
                             <CardTitle tag='h6'>Relationship wise Claim Analysis</CardTitle>
                         </CardHeader>
                         <CardBody>
-                            <Table size='sm' responsive style={{ height: '30vh' }}>
+                            <Table size='sm' responsive style={{ height: 200 }}>
                                 <thead>
                                     <tr>
                                         <th>CLAIM TYPE</th>
@@ -95,7 +95,7 @@ function ClaimAnalysisThree(props) {
                             </CardTitle>
                         </CardHeader>
                         <CardBody>
-                            <Table size='lg' responsive style={{ height: '60vh' }}>
+                            <Table size='lg' responsive style={{ height: 400 }}>
                                 <thead>
                                     <tr>
                                         <th>AMOUNT BAND</th>

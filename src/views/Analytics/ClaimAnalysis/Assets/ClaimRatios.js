@@ -47,7 +47,7 @@ const ClaimRatios = ({ info, direction }) => {
         <Card style={{ marginBottom: -10 }}>
             <CardBody>
                 <h5>Claim Ratios</h5>
-                <Chart options={options} series={series} type='bar' height={150} />
+                <Chart options={options} series={series} type='bar' height={140} />
             </CardBody>
         </Card>
     )

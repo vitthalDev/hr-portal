@@ -29,7 +29,7 @@ function ClaimAnalysisTwo(props) {
                             <CardTitle tag='h6'>Claim Incidences Ratio & Projection</CardTitle>
                         </CardHeader>
                         <CardBody>
-                            <Table size='sm' responsive style={{ height: '40vh' }}>
+                            <Table size='sm' responsive style={{ height: 250 }}>
                                 <thead>
                                     <tr>
                                         <th>RELATION</th>
@@ -91,7 +91,7 @@ function ClaimAnalysisTwo(props) {
             <Row>
                 <Col md='7' sm='12'>
                     <Card>
-                        <Table size='lg' responsive style={{ height: '60vh' }}>
+                        <Table size='lg' responsive style={{ height: 390 }}>
                             <thead>
                                 <tr>
                                     <th>CLAIM STATUS</th>
