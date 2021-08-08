@@ -158,8 +158,8 @@ const PoliciesTable = () => {
                                 <Label for='sort-select'>Entries</Label>
                             </div>
                         </Col>
-                        <Col sm='4'>
-                            <img src={awsomefilter} style={{ cursor: 'pointer', marginRight: 20 }} onClick={() => setShowFilterPolicy(!showFilterPolicy)} />
+                        <Col sm='2' style={{ marginLeft: -50 }}>
+                            <img src={awsomefilter} style={{ cursor: 'pointer', marginRight: 10 }} onClick={() => setShowFilterPolicy(!showFilterPolicy)} />
                             <img src={awsomeplus} style={{ cursor: 'pointer' }} onClick={() => setShowAddPolicy(!showAddPolicy)} />
                         </Col>
                         <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='3'>
@@ -237,111 +237,109 @@ const PoliciesTable = () => {
                 <Modal isOpen={showAddPolicy} toggle={() => setShowAddPolicy(!showAddPolicy)} className='modal-dialog-centered'>
                     <ModalHeader toggle={() => setShowAddPolicy(!showAddPolicy)}>Add New Policy (Other than eOxegen)</ModalHeader>
                     <ModalBody>
-                        <Card>
-                            <CardBody>
-                                <Row>
-                                    <Col md='8' sm='12'>
-                                        <h5 style={{ marginTop: 10 }}>Company Name</h5>
-                                    </Col>
-                                    <Col md='4' sm='12'>
-                                        <Button color='primary'>Select<ChevronDown size={12} /></Button>
-                                    </Col>
-                                </Row><br />
-                                <Row>
-                                    <Col md='8' sm='12'>
-                                        <h5 style={{ marginTop: 10 }}>Policy</h5>
-                                    </Col>
-                                    <Col md='4' sm='12'>
-                                        <Input type='text' name='policyPrice' id='policyPrice' />
-                                    </Col>
-                                </Row><br />
-                                <Row>
-                                    <Col md='10'>
-                                        <h5 style={{ padding: 10 }}>Health Cover</h5>
-                                        <div style={{ paddingLeft: 10 }}>
-                                            <small>OPD</small><br />
-                                            <small>Cashless</small><br />
-                                            <small>Home Service</small><br />
-                                            <small>Medicene Claim</small>
-                                        </div>
-                                    </Col>
-                                    <Col md='2'>
-                                        <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
-                                        <div style={{ paddingTop: 20 }}>
-                                            <CustomInput
-                                                type='checkbox'
-                                                className='custom-control-Primary'
-                                                id='Primary'
-                                                label=''
-                                                defaultChecked
-                                                inline
-                                            />
-                                            <CustomInput
-                                                type='checkbox'
-                                                className='custom-control-Primary'
-                                                id='Primary'
-                                                label=''
-                                                defaultChecked
-                                                inline
-                                            />
-                                            <CustomInput
-                                                type='checkbox'
-                                                className='custom-control-Primary'
-                                                id='Primary'
-                                                label=''
-                                                defaultChecked
-                                                inline
-                                            />
-                                            <CustomInput
-                                                type='checkbox'
-                                                className='custom-control-Primary'
-                                                id='Primary'
-                                                label=''
-                                                defaultChecked
-                                                inline
-                                            />
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md='10'>
-                                        <h5 style={{ padding: 10 }}>Life Cover</h5>
-                                        <div style={{ paddingLeft: 10 }}>
-                                            <small>OPD</small><br />
-                                            <small>Cashless</small><br />
-                                            <small>Home Service</small><br />
-                                            <small>Medicene Claim</small>
-                                        </div>
-                                    </Col>
-                                    <Col md='2'>
-                                        <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
-                                        <div style={{ paddingTop: 20 }}>
-                                            <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                            <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                            <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                            <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col md='8' sm='12'>
-                                        <h5 style={{ marginTop: 10 }}>Approximate Members</h5>
-                                    </Col>
-                                    <Col md='4' sm='12'>
-                                        <Input type='text' name='policyPrice' id='policyPrice' />
-                                    </Col>
-                                </Row><br />
-                                <Row>
-                                    <Col md='6' sm='12' >
-                                        <h5 style={{ marginTop: 10 }}>Additional Family Members</h5>
-                                    </Col>
-                                    <Col md='6' sm='12' className='mt-1'>
-                                        <Button color='primary' style={{ fontSize: 8, width: 90 }}>Adults<ChevronDown size={12} /></Button>
-                                        <Button color='primary' style={{ fontSize: 8, width: 100 }}>Children<ChevronDown size={12} /></Button>
-                                    </Col>
-                                </Row>
-                            </CardBody>
-                        </Card>
+                        <Row>
+                            <Col md='8' sm='12'>
+                                <h5 style={{ marginTop: 10 }}>Company Name</h5>
+                            </Col>
+                            <Col md='4' sm='12'>
+                                <Button color='primary'>Select<ChevronDown size={12} /></Button>
+                            </Col>
+                        </Row><br />
+                        <Row>
+                            <Col md='8' sm='12'>
+                                <h5 style={{ marginTop: 10 }}>Policy</h5>
+                            </Col>
+                            <Col md='4' sm='12'>
+                                <Input type='text' name='policyPrice' id='policyPrice' />
+                            </Col>
+                        </Row><br />
+                        <Row>
+                            <Col md='10'>
+                                <h5 style={{ padding: 10 }}>Health Cover</h5>
+                                <div style={{ paddingLeft: 10 }}>
+                                    <small>OPD</small><br />
+                                    <small>Cashless</small><br />
+                                    <small>Home Service</small><br />
+                                    <small>Medicene Claim</small>
+                                </div>
+                            </Col>
+                            <Col md='2'>
+                                <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
+                                <div style={{ paddingTop: 20 }}>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='P'
+                                        label=''
+                                        defaultChecked
+                                        inline
+                                    />
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='Pr'
+                                        label=''
+                                        defaultChecked
+                                        inline
+                                    />
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='Pri'
+                                        label=''
+                                        defaultChecked
+                                        inline
+                                    />
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='Prim'
+                                        label=''
+                                        defaultChecked
+                                        inline
+                                    />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md='10'>
+                                <h5 style={{ padding: 10, marginTop: 10 }}>Life Cover</h5>
+                                <div style={{ padding: 10 }}>
+                                    <span>OPD</span><br />
+                                    <span>Cashless</span><br />
+                                    <span>Home Service</span><br />
+                                    <span>Medicene Claim</span>
+                                </div>
+                            </Col>
+                            <Col md='2'>
+                                <div style={{ marginTop: 20 }}>
+                                    <CustomInput type='radio' id='0' name='' />
+                                </div>
+                                <div style={{ paddingTop: 10 }}>
+                                    <CustomInput inline type='checkbox' id='1' />
+                                    <CustomInput inline type='checkbox' id='2' />
+                                    <CustomInput inline type='checkbox' id='3' />
+                                    <CustomInput inline type='checkbox' id='4' />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md='8' sm='12'>
+                                <h5 style={{ marginTop: 10 }}>Approximate Members</h5>
+                            </Col>
+                            <Col md='4' sm='12'>
+                                <Input type='text' name='policyPrice' id='policyPrice' />
+                            </Col>
+                        </Row><br />
+                        <Row>
+                            <Col md='6' sm='12' >
+                                <h5 style={{ marginTop: 20 }}>Additional Family Members</h5>
+                            </Col>
+                            <Col md='6' sm='12' className='mt-1'>
+                                <Button color='primary' style={{ fontSize: 10, width: 90 }}><span>Adults</span><ChevronDown size={12} /></Button>
+                                <Button color='primary' style={{ fontSize: 10, width: 100, marginLeft: 5 }}>Children<ChevronDown size={12} /></Button>
+                            </Col>
+                        </Row>
                     </ModalBody>
                     <ModalFooter>
                         <Button color='flat-primary' onClick={() => setShowAddPolicy(!showAddPolicy)}>

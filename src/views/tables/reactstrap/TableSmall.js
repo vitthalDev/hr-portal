@@ -106,12 +106,12 @@ const TableSmall = () => {
     <Table size='sm' responsive>
       <thead>
         <tr>
-          <th>Employee Name</th>
-          <th>Hospital Name</th>
-          <th>Designation</th>
-          <th>Admission Date</th>
-          <th>Estimated Discharge Date</th>
-          <th>Reason Of Admission</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, height: 40, color: '#757575' }}>Employee Name</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, color: '#757575' }}>Hospital Name</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, color: '#757575' }}>Designation</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, color: '#757575' }}>Admission Date</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, color: '#757575' }}>Estimated Discharge Date</th>
+          <th className='font-weight-bold pt-1' style={{ fontSize: 10, color: '#757575' }}>Reason Of Admission</th>
         </tr>
       </thead>
       <tbody>
@@ -120,7 +120,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar1} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Rahul Saxena</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
               </Media>
             </Media>
           </td>
@@ -146,7 +146,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar2} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Nikhil D</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Nikhil D</h5>
               </Media>
             </Media>
           </td>
@@ -172,7 +172,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar3} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Pradeep Saxena</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Pradeep Saxena</h5>
               </Media>
             </Media>
           </td>
@@ -198,7 +198,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar4} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Vishal Sahu</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Vishal Sahu</h5>
               </Media>
             </Media>
           </td>
@@ -224,7 +224,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar5} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Rahul Saxena</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
               </Media>
             </Media>
           </td>
@@ -250,7 +250,7 @@ const TableSmall = () => {
             <Media>
               <Avatar img={avatar6} />
               <Media body>
-                <h5 style={{ fontSize: 10, padding: 10 }}>Rahul Saxena</h5>
+                <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
               </Media>
             </Media>
           </td>
