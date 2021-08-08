@@ -59,7 +59,7 @@ function DemographicsTwo(props) {
             <Row>
                 <Col md='7' sm='5'>
                     <Card>
-                        <Table size='sm' responsive style={{ height: 200 }}>
+                        <Table size='sm' responsive style={{ height: 600 }}>
                             <thead>
                                 <tr >
                                     <th style={{ padding: 10 }}>AGE BAND</th>
