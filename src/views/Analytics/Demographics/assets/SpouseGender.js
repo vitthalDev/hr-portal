@@ -82,13 +82,13 @@ const SpouseGender = props => {
         <Card>
             <CardBody>
                 <Row style={{ marginTop: -70 }}>
-                    <Col md='6' sm='12' className='pl-2' >
+                    <Col md='6' sm='12' className='pl-5' >
                         <h6>Spouse</h6>
                         <div>
-                            <Icon.Square size={15} color='#ebcd60' style={{ backgroundColor: '#ebcd60' }} /><span className='pr-1'>Male - 98%</span>
+                            <Icon.Square size={15} color='#ebcd60' style={{ backgroundColor: '#ebcd60' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>98%</span>
                         </div>
                         <div>
-                            <Icon.Square size={15} color='#c7ac4a' style={{ backgroundColor: '#c7ac4a' }} /><span className='pr-1'>Female - 02%</span>
+                            <Icon.Square size={15} color='#c7ac4a' style={{ backgroundColor: '#c7ac4a' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>02%</span>
                         </div>
                     </Col>
                     <Col md='6' sm='12' style={{ marginTop: -10 }}>

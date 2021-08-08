@@ -92,8 +92,8 @@ function Providers(props) {
                         <CardBody>
                             <Table size='sm' responsive>
                                 <thead>
-                                    <tr>
-                                        <th style={{ fontSize: 10 }}>HOSPITAL NAME</th>
+                                    <tr className='text-center align-items-center' >
+                                        <th style={{ fontSize: 10, height: 40 }}>HOSPITAL NAME</th>
                                         <th style={{ fontSize: 10 }} >SCHEDULE</th>
                                         <th style={{ fontSize: 10 }}>CONTACT</th>
                                         <th style={{ fontSize: 10 }}>NETWORK</th>
@@ -103,7 +103,7 @@ function Providers(props) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 250 }}>
                                             <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
                                             <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
@@ -115,7 +115,7 @@ function Providers(props) {
                                         <td>06</td>
                                         <td>02</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 250 }}>
                                             <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
                                             <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
@@ -127,7 +127,7 @@ function Providers(props) {
                                         <td>16</td>
                                         <td>06</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 250 }}>
                                             <u style={{ fontSize: 12 }}>Lal & sons pathology</u><br />
                                             <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Manpada Road Mumbai- 4200002</span>
@@ -139,7 +139,7 @@ function Providers(props) {
                                         <td>0</td>
                                         <td>0</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 250 }}>
                                             <u style={{ fontSize: 12 }}>Care Blood Bank</u><br />
                                             <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
@@ -151,7 +151,7 @@ function Providers(props) {
                                         <td>0</td>
                                         <td>0</td>
                                     </tr>
-                                    <tr>
+                                    <tr style={{ height: 60 }}>
                                         <td style={{ width: 250 }}>
                                             <u style={{ fontSize: 12 }}>Lilavati Hospital</u><br />
                                             <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Hind Mata Chowk Mumbai- 4200002</span>

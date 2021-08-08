@@ -12,7 +12,7 @@ const EmployeesNewUser = (props) => {
     return (
         <>
             <Fragment>
-                <Breadcrumbs breadCrumbTitle='Policies' breadCrumbParent='Employees' breadCrumbActive='New User' />
+                <Breadcrumbs breadCrumbTitle='Employees' breadCrumbParent='Employees' breadCrumbActive='New User' />
                 <Row>
                     <Col>
                         <EmployeeInformation />

@@ -1,42 +1,39 @@
-import { React, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Wizard from '@components/wizard'
+import { ArrowRight } from 'react-feather'
 import Forms from './Forms'
-import Members from './Members'
 import Documents from './Documents'
-import ContactOne from '../UnpaidEndorsementDetails/ContactOne'
+import Members from './Members'
 
-function PaidEndorsementDetails(props) {
+const PaidEndorsementDetails = () => {
     const [stepper, setStepper] = useState(null)
     const ref = useRef(null)
 
     const steps = [
         {
-            id: 'forms',
-            title: 'Paid Endorsement Form',
+            id: 'paid-form',
+            title: 'Unpaid Endorsement Form',
             subtitle: '',
             content: <Forms stepper={stepper} type='wizard-horizontal' />
-
         },
         {
-            id: 'members',
+            id: 'paid-members',
             title: 'Members',
             subtitle: '',
-            content: <ContactOne stepper={stepper} type='wizard-horizontal' />
+            content: <Members stepper={stepper} type='wizard-horizontal' />
         },
         {
-            id: 'documments',
+            id: 'unpaid-documents',
             title: 'Documents',
             subtitle: '',
-            content: <ContactOne stepper={stepper} type='wizard-horizontal' />
+            content: <Documents stepper={stepper} type='wizard-horizontal' />
         }
-
     ]
+
     return (
-        <>
-            <div className='horizontal-wizard'>
-                <Wizard instance={el => setStepper(el)} ref={ref} steps={steps} />
-            </div>
-        </>
+        <div className='horizontal-wizard'>
+            <Wizard instance={el => setStepper(el)} ref={ref} steps={steps} />
+        </div>
     )
 }
 

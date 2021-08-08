@@ -18,8 +18,8 @@ function PoliciesQuickAccess(props) {
                         <CardBody>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div>
-                                    <h2 className='font-weight-bolder mb-0'>06</h2>
-                                    <p className='card-text'>No. of Policies</p>
+                                    <h2 className='font-weight-medium mb-0' style={{ color: '#625F6E' }}>06</h2>
+                                    <p className='card-text' style={{ color: '#625F6E' }}>No. of Policies</p>
                                 </div>
                                 <div>
                                     <img src={processOK} />
@@ -33,8 +33,8 @@ function PoliciesQuickAccess(props) {
                         <CardBody>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div>
-                                    <h2 className='font-weight-bolder mb-0'>03</h2>
-                                    <p className='card-text'>Health Cover</p>
+                                    <h2 className='font-weight-medium mb-0' style={{ color: '#625F6E' }}>03</h2>
+                                    <p className='card-text' style={{ color: '#625F6E' }}>Health Cover</p>
                                 </div>
                                 <div>
                                     <img src={verifiedChecked} />
@@ -48,8 +48,8 @@ function PoliciesQuickAccess(props) {
                         <CardBody>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div>
-                                    <h2 className='font-weight-bolder mb-0'>03</h2>
-                                    <p className='card-text'>Life Cover</p>
+                                    <h2 className='font-weight-medium mb-0' style={{ color: '#625F6E' }}>03</h2>
+                                    <p className='card-text' style={{ color: '#625F6E' }}>Life Cover</p>
                                 </div>
                                 <div>
                                     <img src={fileCancelled} />
@@ -59,11 +59,11 @@ function PoliciesQuickAccess(props) {
                     </Card>
                 </Col>
                 <Col lg='3' sm='4'>
-                    <Card>
+                    <Card style={{ paddingBottom: 8, cursor: 'pointer' }}>
                         <CardBody onClick={() => setRequestPolicies(!requestPolicies)}>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div>
-                                    <h5 className='font-weight-light mb-0 text-primary'>Request Policies</h5>
+                                    <h5 className='font-weight-bold mb-0 text-primary'>Request Policies</h5>
                                 </div>
                                 <div>
                                     <img src={hourSandCircle} />

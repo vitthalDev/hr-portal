@@ -58,108 +58,110 @@ function DemographicsTwo(props) {
 
             <Row>
                 <Col md='7' sm='5'>
-                    <Table size='sm' responsive style={{ height: '100vh' }}>
-                        <thead>
-                            <tr >
-                                <th style={{ padding: 10 }}>AGE BAND</th>
-                                <th style={{ padding: 10 }}>EMPLOYEE</th>
-                                <th style={{ padding: 10 }}>SPOUSE</th>
-                                <th style={{ padding: 10 }}>CHILD</th>
-                                <th style={{ padding: 10 }}>PARENT</th>
-                                <th style={{ padding: 10 }}>GRAND TOTAL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>0 - 18 Years</td>
-                                <td>1</td>
-                                <td>5</td>
-                                <td>517</td>
-                                <td>-</td>
-                                <td>523</td>
-                            </tr>
-                            <tr>
-                                <td>9 - 25 Years</td>
-                                <td>63</td>
-                                <td>52</td>
-                                <td>182</td>
-                                <td>-</td>
-                                <td>297</td>
-                            </tr>
-                            <tr>
-                                <td>26 - 35 Years</td>
-                                <td>270</td>
-                                <td>203</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>473</td>
-                            </tr>
-                            <tr>
-                                <td>36 - 45 Years</td>
-                                <td>116</td>
-                                <td>130</td>
-                                <td>-</td>
-                                <td>119</td>
-                                <td>265</td>
-                            </tr>
-                            <tr>
-                                <td>46 - 55 Years</td>
-                                <td>157</td>
-                                <td>115</td>
-                                <td>-</td>
-                                <td>269</td>
-                                <td>541</td>
-                            </tr>
-                            <tr>
-                                <td>56 - 65 Years</td>
-                                <td>61</td>
-                                <td>28</td>
-                                <td>-</td>
-                                <td>393</td>
-                                <td>482</td>
-                            </tr>
-                            <tr>
-                                <td>66 - 70 Years</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>105</td>
-                                <td>105</td>
-                            </tr>
-                            <tr>
-                                <td>71 - 75 Years</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>103</td>
-                                <td>103</td>
-                            </tr>
-                            <tr>
-                                <td>76 - 79 Years</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>41</td>
-                                <td>41</td>
-                            </tr>
-                            <tr>
-                                <td>80 Yaers And Above</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>43</td>
-                                <td>43</td>
-                            </tr>
-                            <tr>
-                                <td>Grand Total</td>
-                                <td>668</td>
-                                <td>533</td>
-                                <td>699</td>
-                                <td>973</td>
-                                <td>2873</td>
-                            </tr>
-                        </tbody>
-                    </Table>
+                    <Card>
+                        <Table size='sm' responsive style={{ height: '100vh' }}>
+                            <thead>
+                                <tr >
+                                    <th style={{ padding: 10 }}>AGE BAND</th>
+                                    <th style={{ padding: 10 }}>EMPLOYEE</th>
+                                    <th style={{ padding: 10 }}>SPOUSE</th>
+                                    <th style={{ padding: 10 }}>CHILD</th>
+                                    <th style={{ padding: 10 }}>PARENT</th>
+                                    <th style={{ padding: 10 }}>GRAND TOTAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style={{ height: 60 }}>
+                                    <td>0 - 18 Years</td>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>517</td>
+                                    <td>-</td>
+                                    <td>523</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>9 - 25 Years</td>
+                                    <td>63</td>
+                                    <td>52</td>
+                                    <td>182</td>
+                                    <td>-</td>
+                                    <td>297</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>26 - 35 Years</td>
+                                    <td>270</td>
+                                    <td>203</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>473</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>36 - 45 Years</td>
+                                    <td>116</td>
+                                    <td>130</td>
+                                    <td>-</td>
+                                    <td>119</td>
+                                    <td>265</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>46 - 55 Years</td>
+                                    <td>157</td>
+                                    <td>115</td>
+                                    <td>-</td>
+                                    <td>269</td>
+                                    <td>541</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>56 - 65 Years</td>
+                                    <td>61</td>
+                                    <td>28</td>
+                                    <td>-</td>
+                                    <td>393</td>
+                                    <td>482</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>66 - 70 Years</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>105</td>
+                                    <td>105</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>71 - 75 Years</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>103</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>76 - 79 Years</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>41</td>
+                                    <td>41</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>80 Yaers And Above</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>43</td>
+                                    <td>43</td>
+                                </tr>
+                                <tr style={{ height: 60 }}>
+                                    <td>Grand Total</td>
+                                    <td>668</td>
+                                    <td>533</td>
+                                    <td>699</td>
+                                    <td>973</td>
+                                    <td>2873</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </Card>
                 </Col>
                 <Col md='5' sm='12'>
                     <Card>

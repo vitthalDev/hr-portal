@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { Table, Badge } from 'reactstrap'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
 import { useSkin } from '@hooks/useSkin'
+import { Link } from 'react-router-dom'
 
 const EndorsementTableData = () => {
   const { colors } = useContext(ThemeColors)
@@ -21,7 +22,11 @@ const EndorsementTableData = () => {
       </thead>
       <tbody>
         <tr>
-          <td>5645644464</td>
+          <td>
+            <Link to='/dashboard/endorsement/tracker' style={{ color: '#9B9B9B' }}>
+              5645644464
+            </Link>
+          </td>
           <td>Paid</td>
           <td>Rahul Sharma</td>
           <td>29 Jan 2021</td>

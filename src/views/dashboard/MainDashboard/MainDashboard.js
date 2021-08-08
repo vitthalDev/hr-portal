@@ -132,7 +132,8 @@ function MainDashboard(props) {
                                     <p className='card-text'>E card issued</p>
                                 </div>
                                 <div className='avatar avatar-stats p-50 m-0 bg-light-success'>
-                                    <img src={cloudDownload} style={{ height: 30, width: 30 }} />
+                                    {/* <img src={cloudDownload} style={{ height: 30, width: 30 }} /> */}
+                                    <DownloadCloud size={30} />
                                 </div>
                             </div>
                         </CardBody>

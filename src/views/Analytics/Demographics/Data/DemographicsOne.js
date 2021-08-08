@@ -85,7 +85,7 @@ function DemographicsOne(props) {
                         </CardBody>
                     </Card>
                 </Col>
-                <Col md='5' sm='12' style={{ height: 200 }}>
+                <Col md='5' sm='12'>
                     <FamilyMembersSession
                         primary={context.colors.primary.main}
                         warning={context.colors.warning.main}
@@ -166,7 +166,7 @@ function DemographicsOne(props) {
                         </CardBody>
                     </Card>
                 </Col>
-                <Col md='5' sm='12' style={{ height: 200 }}>
+                <Col md='5' sm='12'>
                     <Card>
                         <EmployeeGender
                             primary='#84D0FF'

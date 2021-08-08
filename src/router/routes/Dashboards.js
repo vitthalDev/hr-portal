@@ -38,6 +38,11 @@ const DashboardRoutes = [
     exact: true
   },
   {
+    path: '/dashboard/endorsement/tracker',
+    component: lazy(() => import('../../views/Endorsement/EndorsementTracker/Tracker')),
+    exact: true
+  },
+  {
     path: '/dashboard/employees',
     component: lazy(() => import('../../views/Employees/EmployeesHome/EmployeesHome')),
     exact: true
