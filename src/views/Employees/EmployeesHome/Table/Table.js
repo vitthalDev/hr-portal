@@ -126,19 +126,17 @@ const EmployeeTable = () => {
     return (
         <Fragment>
             <Card>
-                <CardHeader className='border-bottom'>
-                    <CardTitle tag='h4'></CardTitle>
-                </CardHeader>
-                <Row className='mx-0 mt-1 mb-50'>
-                    <Col sm='2'>
-                        <div className='d-flex align-items-center'>
-                            <Label for='sort-select'>show</Label>
+                <Row className='mx-0 mt-1 mb-1 ml-1 mr-1'>
+                    <Col xl='5' lg='12'>
+                        <div className='d-flex justify-content-star align-items-center'>
+                            <Label className='pr-1' for='sort-select'>show</Label>
                             <Input
                                 className='dataTable-select'
                                 type='select'
                                 id='sort-select'
                                 value={rowsPerPage}
                                 onChange={e => handlePerPage(e)}
+                                style={{ width: 70 }}
                             >
                                 <option value={7}>7</option>
                                 <option value={10}>10</option>
@@ -147,16 +145,11 @@ const EmployeeTable = () => {
                                 <option value={75}>75</option>
                                 <option value={100}>100</option>
                             </Input>
-                            <Label for='sort-select'>Entries</Label>
+                            <Label className='pl-1' for='sort-select'>Entries</Label>
                         </div>
                     </Col>
-                    <Col sm='4'>
 
-                    </Col>
-                    <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='3'>
-                        {/* <Label className='mr-1' for='search-input'>
-                            Search
-                        </Label> */}
+                    <Col xl='4'>
                         <Input
                             className='dataTable-filter'
                             type='text'
@@ -165,24 +158,16 @@ const EmployeeTable = () => {
                             placeHolder='Search'
                             value={searchValue}
                             onChange={handleFilter}
+                            style={{ height: 40, marginLeft: 70 }}
                         />
                     </Col>
-                    <Col sm='3'>
+
+                    <Col xl='3' lg='12'>
                         <Link to='/dashboard/employees/newuser'>
-                            <Button.Ripple color='primary'>New Endersoment</Button.Ripple>
+                            <Button.Ripple style={{ marginLeft: 70 }} color='primary'>Add Employee</Button.Ripple>
                         </Link>
                     </Col>
                 </Row>
-                {/* <DataTable
-                    noHeader
-                    pagination
-                    paginationServer
-                    className='react-dataTable'
-                    columns={serverSideColumns}
-                    sortIcon={<ChevronDown size={10} />}
-                    paginationComponent={CustomPagination}
-                    data={dataToRender()}
-                /> */}
                 <TableData />
             </Card>
         </Fragment>

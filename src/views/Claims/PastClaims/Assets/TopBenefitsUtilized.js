@@ -29,14 +29,14 @@ const TopBenefitsUtilized = props => {
         },
         labels: ['Employees', 'Spouse', 'Children', 'Parent'],
         dataLabels: {
-            enabled: true
+            enabled: false
         },
         legend: { show: false },
         comparedResult: [2, -3, 8, -4],
         stroke: { width: 0 },
         colors: [props.primary, props.warning, props.danger, props.success]
     },
-        series = [52, 32, 6, 10]
+        series = [42, 32, 16, 10]
 
     const renderChartInfo = () => {
         return data.chart_info.map((item, index) => {
@@ -82,13 +82,13 @@ const TopBenefitsUtilized = props => {
                 <CardTitle tag='h6'>Top Benefits Utilised</CardTitle>
             </CardHeader>
             <CardBody>
-                <Chart className='my-1' options={options} series={series} type='donut' height={260} />
+                <Chart className='my-1' options={options} series={series} type='donut' height={270} />
                 {/* {renderChartInfo()} */}
-                <div>
-                    <Icon.Square size={15} className='bg-gradient-primary' /><span className='pr-1'>Employees</span>
-                    <Icon.Square size={15} className='bg-gradient-danger' /><span className='pr-1'>Children</span>
-                    <Icon.Square size={15} className='bg-gradient-warning' /><span className='pr-1'>Spouse</span>
-                    <Icon.Square size={15} className='bg-gradient-success' /><span>Parent</span>
+                <div className='d-flex justify-content-between'>
+                    <Icon.Square size={15} style={{ color: '#826AF9', backgroundColor: '#826AF9' }} /><span className='pr-1'>Employees</span>
+                    <Icon.Square size={15} style={{ color: '#9F87FF', backgroundColor: '#9F87FF' }} /><span className='pr-1'>Children</span>
+                    <Icon.Square size={15} style={{ color: '#D3B3FF', backgroundColor: '#D3B3FF' }} /><span className='pr-1'>Spouse</span>
+                    <Icon.Square size={15} style={{ color: '#F8D3FF', backgroundColor: '#F8D3FF' }} /><span>Parent</span>
                 </div>
 
             </CardBody>

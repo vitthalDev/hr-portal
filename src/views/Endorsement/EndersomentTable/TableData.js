@@ -11,7 +11,7 @@ const EndorsementTableData = () => {
   return (
     <Table size='md' responsive>
       <thead>
-        <tr>
+        <tr style={{ height: 50 }}>
           <th>ENDORSEMENT NUMBER</th>
           <th>TYPE</th>
           <th>EMPLOYEE NAME</th>
@@ -21,7 +21,7 @@ const EndorsementTableData = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>
             <Link to='/dashboard/endorsement/tracker' style={{ color: '#9B9B9B' }}>
               5645644464
@@ -32,31 +32,31 @@ const EndorsementTableData = () => {
           <td>29 Jan 2021</td>
           <td>Address Change</td>
           <td>
-            <Badge color='success' pill className='badge-glow'>
+            <Badge color='info' pill className='badge'>
               Accepted
             </Badge>
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>476589435</td>
           <td>Paid</td>
           <td>Nikhil Singh</td>
           <td>25 Jan 2021</td>
           <td>Contact Info Update</td>
           <td>
-            <Badge color='warning' pill className='badge-glow'>
+            <Badge color='warning' pill className='badge'>
               In-process
             </Badge>
           </td>
         </tr>
-        <tr>
+        <tr style={{ height: 60 }}>
           <td>984757458</td>
           <td>Nill</td>
           <td>Rekha Sharma</td>
           <td>29 Jan 2021</td>
           <td>Add Spouse</td>
           <td>
-            <Badge color='warning' pill className='badge-glow'>
+            <Badge color='warning' pill className='badge'>
               In-process
             </Badge>
           </td>

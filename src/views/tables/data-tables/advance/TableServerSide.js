@@ -10,10 +10,11 @@ import { useSelector, useDispatch } from 'react-redux'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
-import { ChevronDown } from 'react-feather'
+import { ChevronDown, ChevronLeft, ChevronRight } from 'react-feather'
 import DataTable from 'react-data-table-component'
 import TableSmall from '../../reactstrap/TableSmall'
-import { Card, CardHeader, CardTitle, Input, Label, Row, Col } from 'reactstrap'
+import { Card, CardHeader, CardTitle, Input, Label, Row, Col, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
+import CardBody from 'reactstrap/lib/CardBody'
 
 const DataTableServerSide = () => {
   // ** Store Vars
@@ -128,16 +129,18 @@ const DataTableServerSide = () => {
         <CardHeader className='border-bottom' style={{ marginTop: -30 }}>
           <CardTitle tag='h4'>Active Admissions</CardTitle>
         </CardHeader>
+
         <Row className='mx-0 mt-1 mb-50'>
-          <Col sm='2'>
-            <div className='d-flex align-items-center'>
-              <Label for='sort-select'>show</Label>
+          <Col xl='3' lg='12'>
+            <div className='d-flex justify-content-star align-items-center'>
+              <Label className='pr-1' for='sort-select'>show</Label>
               <Input
                 className='dataTable-select'
                 type='select'
                 id='sort-select'
                 value={rowsPerPage}
                 onChange={e => handlePerPage(e)}
+                style={{ width: 70 }}
               >
                 <option value={7}>7</option>
                 <option value={10}>10</option>
@@ -146,34 +149,46 @@ const DataTableServerSide = () => {
                 <option value={75}>75</option>
                 <option value={100}>100</option>
               </Input>
-              <Label for='sort-select'>entries</Label>
+              <Label className='pl-1' for='sort-select'>Entries</Label>
             </div>
           </Col>
-          <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='6'>
-            <Label className='mr-1' for='search-input'>
-              Search
-            </Label>
-            <Input
-              className='dataTable-filter'
-              type='text'
-              bsSize='sm'
-              id='search-input'
-              value={searchValue}
-              onChange={handleFilter}
-            />
+
+          <Col xl='5' />
+
+          <Col xl='4' lg='12'>
+            <Pagination className='d-flex justify-content-end  align-items-center'>
+              <PaginationItem>
+                <PaginationLink href='#' first>
+                  <ChevronLeft size={15} />
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem active >
+                <PaginationLink href='#'>1</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href='#'>2</PaginationLink>
+              </PaginationItem>
+              <PaginationItem >
+                <PaginationLink href='#'>3</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href='#'>4</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href='#'>5</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href='#' last>
+                  <ChevronRight size={15} />
+                </PaginationLink>
+              </PaginationItem>
+            </Pagination>
           </Col>
         </Row>
-        {/* <DataTable
-          noHeader
-          pagination
-          paginationServer
-          className='react-dataTable'
-          columns={serverSideColumns}
-          sortIcon={<ChevronDown size={10} />}
-          paginationComponent={CustomPagination}
-          data={dataToRender()}
-        /> */}
-        <TableSmall />
+
+        <CardBody>
+          <TableSmall />
+        </CardBody>
       </Card>
     </Fragment>
   )

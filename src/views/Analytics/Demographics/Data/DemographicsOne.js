@@ -87,10 +87,10 @@ function DemographicsOne(props) {
                 </Col>
                 <Col md='5' sm='12'>
                     <FamilyMembersSession
-                        primary={context.colors.primary.main}
-                        warning={context.colors.warning.main}
-                        danger={context.colors.danger.main}
-                        success={context.colors.success.main}
+                        primary='#673AB7'
+                        warning='#FF7575'
+                        danger='#34A3EC'
+                        success='#FFA726'
                     />
                 </Col>
             </Row>
@@ -169,24 +169,24 @@ function DemographicsOne(props) {
                 <Col md='5' sm='12'>
                     <Card>
                         <EmployeeGender
-                            primary='#84D0FF'
-                            warning='#B2FFFF'
+                            primary='#09CEC9'
+                            warning='#34A3EC'
                             danger={context.colors.danger.main}
                             success={context.colors.success.main}
                         />
                         <SpouseGender
-                            primary='#ebcd60'
-                            warning='#c7ac4a'
+                            primary='#FFA726'
+                            warning='#FFCB7E'
                             danger={context.colors.danger.main}
                             success={context.colors.success.main}
                         />
                         <ParentGender
-                            primary='#d13532'
-                            warning='#db7472'
+                            primary='#FF7575'
+                            warning='#FFBCBC'
                         />
                         <ChildrenGender
-                            primary='#8448d9'
-                            warning='#a57be0'
+                            primary='#673AB7'
+                            warning='#B295E4'
                         />
                     </Card>
                 </Col>

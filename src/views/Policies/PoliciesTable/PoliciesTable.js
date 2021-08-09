@@ -11,9 +11,9 @@ import { useSelector, useDispatch } from 'react-redux'
 
 // ** Third Party Components
 import ReactPaginate from 'react-paginate'
-import { ChevronDown } from 'react-feather'
+import { ChevronDown, ChevronLeft, ChevronRight } from 'react-feather'
 import DataTable from 'react-data-table-component'
-import { Card, CardHeader, CardTitle, Input, Label, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, CustomInput } from 'reactstrap'
+import { Card, CardHeader, CardTitle, Input, Label, Row, Col, Button, ButtonGroup, Modal, ModalHeader, ModalBody, ModalFooter, CustomInput, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import awsomefilter from '@src/assets/images/icons/awsomefilter.png'
 import awsomeplus from '@src/assets/images/icons/awsomeplus.png'
 import CardBody from 'reactstrap/lib/CardBody'
@@ -131,22 +131,26 @@ const PoliciesTable = () => {
         <>
             <Fragment>
                 <Card>
-                    {/* <CardHeader className='border-bottom'>
-                    <CardTitle tag='h4'></CardTitle>
-                </CardHeader> */}
-                    <Row className='mx-0 mt-1 mb-50'>
+                    <Row className='mx-0 mt-1 mb-0 ml-1'>
                         <Col sm='2'>
-                            <div>
-                                <h5>No. of Policies</h5>
-                            </div>
-                            <div className='d-flex align-items-center'>
-                                <Label for='sort-select'>show</Label>
+                            <h5>No. of Policies</h5>
+                        </Col>
+                        <Col sm='1' style={{ marginLeft: -40 }} >
+                            <img src={awsomefilter} style={{ cursor: 'pointer', marginRight: 10 }} onClick={() => setShowFilterPolicy(!showFilterPolicy)} />
+                            <img src={awsomeplus} style={{ cursor: 'pointer' }} onClick={() => setShowAddPolicy(!showAddPolicy)} />
+                        </Col>
+                    </Row>
+                    <Row className='mx-0 mt-0 mb-0 ml-1 mr-1'>
+                        <Col xl='3' lg='12'>
+                            <div className='d-flex justify-content-star align-items-center'>
+                                <Label className='pr-1' for='sort-select'>show</Label>
                                 <Input
                                     className='dataTable-select'
                                     type='select'
                                     id='sort-select'
                                     value={rowsPerPage}
                                     onChange={e => handlePerPage(e)}
+                                    style={{ width: 70 }}
                                 >
                                     <option value={7}>7</option>
                                     <option value={10}>10</option>
@@ -155,42 +159,46 @@ const PoliciesTable = () => {
                                     <option value={75}>75</option>
                                     <option value={100}>100</option>
                                 </Input>
-                                <Label for='sort-select'>Entries</Label>
+                                <Label className='pl-1' for='sort-select'>Entries</Label>
                             </div>
                         </Col>
-                        <Col sm='2' style={{ marginLeft: -50 }}>
-                            <img src={awsomefilter} style={{ cursor: 'pointer', marginRight: 10 }} onClick={() => setShowFilterPolicy(!showFilterPolicy)} />
-                            <img src={awsomeplus} style={{ cursor: 'pointer' }} onClick={() => setShowAddPolicy(!showAddPolicy)} />
-                        </Col>
-                        <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='3'>
-                            {/* <Label className='mr-1' for='search-input'>
-                            Search
-                        </Label> */}
-                            {/* <Input
-                            className='dataTable-filter'
-                            type='text'
-                            bsSize='sm'
-                            id='search-input'
-                            placeHolder='Search'
-                            value={searchValue}
-                            onChange={handleFilter}
-                        /> */}
-                        </Col>
-                        <Col sm='3'>
-                            {/* <Button.Ripple color='primary'>New Endersoment</Button.Ripple> */}
+
+                        <Col xl='5' />
+
+                        <Col xl='4' lg='12'>
+                            <Pagination className='d-flex justify-content-end  align-items-center'>
+                                <PaginationItem>
+                                    <PaginationLink href='#' first>
+                                        <ChevronLeft size={15} />
+                                    </PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem active >
+                                    <PaginationLink href='#'>1</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href='#'>2</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem >
+                                    <PaginationLink href='#'>3</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href='#'>4</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href='#'>5</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href='#' last>
+                                        <ChevronRight size={15} />
+                                    </PaginationLink>
+                                </PaginationItem>
+                            </Pagination>
                         </Col>
                     </Row>
-                    {/* <DataTable
-                    noHeader
-                    pagination
-                    paginationServer
-                    className='react-dataTable'
-                    columns={serverSideColumns}
-                    sortIcon={<ChevronDown size={10} />}
-                    paginationComponent={CustomPagination}
-                    data={dataToRender()}
-                /> */}
-                    <TableData />
+
+                    <CardBody style={{ marginTop: -20 }}>
+                        <TableData />
+                    </CardBody>
                 </Card>
             </Fragment>
 
@@ -204,7 +212,7 @@ const PoliciesTable = () => {
                                 <Label for='all'>All</Label>
                             </Col>
                             <Col md='2' sm='12'>
-                                <Input type='radio' name='all' id='showAll' />
+                                <Input type='radio' name='plan' id='showAll' />
                             </Col>
                         </Row>
                         <Row>
@@ -212,7 +220,7 @@ const PoliciesTable = () => {
                                 <Label for='healthCover'>Health Cover</Label>
                             </Col>
                             <Col md='2' sm='12'>
-                                <Input type='radio' name='healthCover' id='healthCover' />
+                                <Input type='radio' name='plan' id='healthCover' />
                             </Col>
                         </Row>
                         <Row>
@@ -220,7 +228,7 @@ const PoliciesTable = () => {
                                 <Label for='lifeCover'>Life Cover</Label>
                             </Col>
                             <Col md='2' sm='12'>
-                                <Input type='radio' name='lifeCover' id='lifeCover' />
+                                <Input type='radio' name='plan' id='lifeCover' />
                             </Col>
                         </Row>
                     </ModalBody>
@@ -238,106 +246,156 @@ const PoliciesTable = () => {
                     <ModalHeader toggle={() => setShowAddPolicy(!showAddPolicy)}>Add New Policy (Other than eOxegen)</ModalHeader>
                     <ModalBody>
                         <Row>
-                            <Col md='8' sm='12'>
+                            <Col md='6' sm='12'>
                                 <h5 style={{ marginTop: 10 }}>Company Name</h5>
                             </Col>
-                            <Col md='4' sm='12'>
-                                <Button color='primary'>Select<ChevronDown size={12} /></Button>
+                            <Col md='6' sm='12'>
+                                <ButtonGroup>
+                                    <Button style={{ width: 170, marginLeft: -15 }} color='primary'>Select</Button>
+                                    <Button color='primary'><ChevronDown size={15} /></Button>
+                                </ButtonGroup>
                             </Col>
                         </Row><br />
                         <Row>
-                            <Col md='8' sm='12'>
-                                <h5 style={{ marginTop: 10 }}>Policy</h5>
+                            <Col md='6'>
+                                <h5 style={{ paddingTop: 10 }}>Policy</h5>
                             </Col>
-                            <Col md='4' sm='12'>
-                                <Input type='text' name='policyPrice' id='policyPrice' />
+                            <Col md='6'>
+                                <Input style={{ width: 230, marginLeft: -15 }} type='text' id='policy' placeholder='Rs' />
                             </Col>
-                        </Row><br />
-                        <Row>
-                            <Col md='10'>
-                                <h5 style={{ padding: 10 }}>Health Cover</h5>
-                                <div style={{ paddingLeft: 10 }}>
-                                    <small>OPD</small><br />
-                                    <small>Cashless</small><br />
-                                    <small>Home Service</small><br />
-                                    <small>Medicene Claim</small>
-                                </div>
+                        </Row>
+                        <Row className='d-flex justify-content-space-between pt-2'>
+                            <Col xl='9'>
+                                <h5 >Health Cover</h5>
+                                <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                    <li style={{ paddingBottom: 5 }}>OPD</li>
+                                    <li style={{ paddingBottom: 5 }}>Cashless</li>
+                                    <li style={{ paddingBottom: 5 }}>HomeServices</li>
+                                    <li>Medicine claim</li>
+                                </ul>
                             </Col>
-                            <Col md='2'>
+                            <Col className='justify-content-start'>
                                 <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
-                                <div style={{ paddingTop: 20 }}>
-                                    <CustomInput
-                                        type='checkbox'
-                                        className='custom-control-Primary'
-                                        id='P'
-                                        label=''
-                                        defaultChecked
-                                        inline
-                                    />
-                                    <CustomInput
-                                        type='checkbox'
-                                        className='custom-control-Primary'
-                                        id='Pr'
-                                        label=''
-                                        defaultChecked
-                                        inline
-                                    />
-                                    <CustomInput
-                                        type='checkbox'
-                                        className='custom-control-Primary'
-                                        id='Pri'
-                                        label=''
-                                        defaultChecked
-                                        inline
-                                    />
-                                    <CustomInput
-                                        type='checkbox'
-                                        className='custom-control-Primary'
-                                        id='Prim'
-                                        label=''
-                                        defaultChecked
-                                        inline
-                                    />
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md='10'>
-                                <h5 style={{ padding: 10, marginTop: 10 }}>Life Cover</h5>
-                                <div style={{ padding: 10 }}>
-                                    <span>OPD</span><br />
-                                    <span>Cashless</span><br />
-                                    <span>Home Service</span><br />
-                                    <span>Medicene Claim</span>
-                                </div>
-                            </Col>
-                            <Col md='2'>
-                                <div style={{ marginTop: 20 }}>
-                                    <CustomInput type='radio' id='0' name='' />
-                                </div>
                                 <div style={{ paddingTop: 10 }}>
-                                    <CustomInput inline type='checkbox' id='1' />
-                                    <CustomInput inline type='checkbox' id='2' />
-                                    <CustomInput inline type='checkbox' id='3' />
-                                    <CustomInput inline type='checkbox' id='4' />
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='a'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='b'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='c'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='d'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col md='8' sm='12'>
-                                <h5 style={{ marginTop: 10 }}>Approximate Members</h5>
+
+                        <Row className='d-flex justify-content-space-between pt-2'>
+                            <Col xl='9'>
+                                <h5 >Life Cover</h5>
+                                <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                    <li style={{ paddingBottom: 5 }}>Accident</li>
+                                    <li style={{ paddingBottom: 5 }}>Cashless</li>
+                                    <li style={{ paddingBottom: 5 }}>HomeServices</li>
+                                    <li>Medicine claim</li>
+                                </ul>
                             </Col>
-                            <Col md='4' sm='12'>
-                                <Input type='text' name='policyPrice' id='policyPrice' />
+                            <Col className='justify-content-start'>
+                                <CustomInput type='radio' id='lifeCoverage' name='lifeCoverage' />
+                                <div style={{ paddingTop: 10 }}>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='e'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='f'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='g'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
+                                <div>
+                                    <CustomInput
+                                        type='checkbox'
+                                        className='custom-control-Primary'
+                                        id='h'
+                                        name=''
+                                        label=''
+                                        inline
+                                    />
+                                </div>
                             </Col>
-                        </Row><br />
-                        <Row>
-                            <Col md='6' sm='12' >
-                                <h5 style={{ marginTop: 20 }}>Additional Family Members</h5>
+                        </Row>
+                        <Row className='mt-2'>
+                            <Col md='6'>
+                                <h5 style={{ paddingTop: 10 }}>Approximate Members</h5>
                             </Col>
-                            <Col md='6' sm='12' className='mt-1'>
-                                <Button color='primary' style={{ fontSize: 10, width: 90 }}><span>Adults</span><ChevronDown size={12} /></Button>
-                                <Button color='primary' style={{ fontSize: 10, width: 100, marginLeft: 5 }}>Children<ChevronDown size={12} /></Button>
+                            <Col md='6'>
+                                <Input style={{ width: 230, marginLeft: -15 }} type='text' id='policy' placeholder='' />
+                            </Col>
+                        </Row>
+                        <Row className='mt-2'>
+                            <Col md='5'>
+                                <h5 style={{ paddingTop: 10 }}>Additional Family Members</h5>
+                            </Col>
+                            <Col md='7'>
+                                <div className='d-flex justify-content-end'>
+                                    <ButtonGroup style={{ marginRight: 5 }}>
+                                        <Button style={{ height: 45, width: 70 }} color='relief-primary' ><small style={{ fontSize: 8 }}>Adults</small></Button>
+                                        <Button style={{ width: 5 }} color='relief-primary'><ChevronDown size={10} /></Button>
+                                    </ButtonGroup>
+                                    <ButtonGroup>
+                                        <Button style={{ height: 45, width: 70 }} color='relief-primary' ><small style={{ fontSize: 8 }}>Children</small></Button>
+                                        <Button style={{ width: 5 }} color='relief-primary'><ChevronDown size={10} /></Button>
+                                    </ButtonGroup>
+                                </div>
                             </Col>
                         </Row>
                     </ModalBody>

@@ -79,13 +79,13 @@ const FamilyMembersSession = props => {
     return data !== null ? (
         <Card>
             <CardBody>
-                <Chart className='my-1' options={options} series={series} type='donut' height={300} />
+                <Chart className='my-1' options={options} series={series} type='donut' height={290} />
                 {/* {renderChartInfo()} */}
-                <div>
-                    <Icon.Square size={15} className='bg-gradient-primary' /><span className='pr-1'>Employees</span>
-                    <Icon.Square size={15} className='bg-gradient-danger' /><span className='pr-1'>Children</span>
-                    <Icon.Square size={15} className='bg-gradient-warning' /><span className='pr-1'>Spouse</span>
-                    <Icon.Square size={15} className='bg-gradient-success' /><span>Parent</span>
+                <div className='d-flex justify-content-between'>
+                    <Icon.Square size={15} style={{ color: '#673AB7', backgroundColor: '#673AB7' }} /><span className='pr-1'>Employees</span>
+                    <Icon.Square size={15} style={{ color: '#FF7575', backgroundColor: '#FF7575' }} /><span className='pr-1'>Children</span>
+                    <Icon.Square size={15} style={{ color: '#34A3EC', backgroundColor: '#34A3EC' }} /><span className='pr-1'>Spouse</span>
+                    <Icon.Square size={15} style={{ color: '#FFA726', backgroundColor: '#FFA726' }} /><span>Parent</span>
                 </div>
 
             </CardBody>

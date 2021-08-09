@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import Avatar from '@components/avatar'
 import avatarImg from '@src/assets/images/portrait/small/avatar-s-1.jpg'
 import { Layout, Calendar, Phone, Mail, MapPin, User, Edit, Edit2, Trash, Trash2 } from 'react-feather'
-import { Row, Col, CardGroup, Card, FormGroup, Input, Form, Label, CardImg, CardBody, CardTitle, CardText, CardFooter, Button, Badge, Table, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap'
+import { Row, Col, CardGroup, Card, FormGroup, Input, Form, Label, CardImg, CardBody, CardTitle, CardText, CardFooter, Button, ButtonGroup, Badge, Table, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap'
 import CardHeader from 'reactstrap/lib/CardHeader'
 
 function EmployeesProfile(props) {
@@ -93,7 +93,7 @@ function EmployeesProfile(props) {
                 </Col>
                 <Col md='3'>
                     <Card>
-                        <CardBody style={{ marginBottom: 5 }}>
+                        <CardBody style={{ height: 210 }}>
                             <Row style={{ paddingBottom: 12 }}>
                                 <Col md='8'>
                                     <div style={{ fontSize: 10 }}>
@@ -127,8 +127,10 @@ function EmployeesProfile(props) {
                                 </Col>
                             </Row><br />
                             <Row>
-                                <Button.Ripple color='primary' style={{ width: 100, marginLeft: 5, marginRight: 5 }} onClick={(e) => { setShowPolicyDetail(!showPolicyDetail) }}><small>Upgrade Plan</small></Button.Ripple>
-                                <Button.Ripple color='warning' style={{ width: 100, marginLeft: 5, marginRight: 5 }}><small>Share Policy</small></Button.Ripple>
+                                <ButtonGroup>
+                                    <Button.Ripple color='primary' style={{ width: 100, marginLeft: 5, marginRight: 5 }} onClick={(e) => { setShowPolicyDetail(!showPolicyDetail) }}><small style={{ fontSize: 8 }}>Upgrade Plan</small></Button.Ripple>
+                                    <Button.Ripple color='warning' style={{ width: 100, marginLeft: 5, marginRight: 5 }}><small style={{ fontSize: 8 }}>Share Policy</small></Button.Ripple>
+                                </ButtonGroup>
                             </Row>
                         </CardBody>
                     </Card>
@@ -207,7 +209,7 @@ function EmployeesProfile(props) {
                                         <td>Rakesh</td>
                                         <td>Father</td>
                                         <td>+91 9875688374</td>
-                                        <td><Edit2 size={16} style={{ marginRight: 10, cursor: 'pointer' }} onClick={() => setShowEmergencyDetail(!showEmergencyDetail) }/><Trash2 size={16} /></td>
+                                        <td><Edit2 size={16} style={{ marginRight: 10, cursor: 'pointer' }} onClick={() => setShowEmergencyDetail(!showEmergencyDetail)} /><Trash2 size={16} /></td>
                                     </tr>
                                     <tr>
                                         <td>Pooja</td>
@@ -552,9 +554,9 @@ function EmployeesProfile(props) {
                 </Modal>
             </div>
 
-             {/* emergency contact detail */}
+            {/* emergency contact detail */}
 
-             <div>
+            <div>
                 <Modal isOpen={showEmergencyDetail} toggle={() => setShowEmergencyDetail(!showEmergencyDetail)} className='modal-dialog-centered'>
                     <ModalHeader toggle={() => setShowEmergencyDetail(!showEmergencyDetail)}>Family Details</ModalHeader>
                     <ModalBody>

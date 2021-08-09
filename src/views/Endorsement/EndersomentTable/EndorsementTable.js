@@ -129,19 +129,17 @@ const EndersomentTable = () => {
         <>
             <Fragment>
                 <Card>
-                    {/* <CardHeader className='border-bottom'>
-                    <CardTitle tag='h4'></CardTitle>
-                </CardHeader> */}
-                    <Row className='mx-0 mt-1 mb-50'>
-                        <Col sm='2'>
-                            <div className='d-flex align-items-center'>
-                                <Label for='sort-select'>show</Label>
+                    <Row className='mx-0 mt-1 mb-1 ml-1 mr-1'>
+                        <Col xl='6' lg='12'>
+                            <div className='d-flex justify-content-star align-items-center'>
+                                <Label className='pr-1' for='sort-select'>show</Label>
                                 <Input
                                     className='dataTable-select'
                                     type='select'
                                     id='sort-select'
                                     value={rowsPerPage}
                                     onChange={e => handlePerPage(e)}
+                                    style={{ width: 70 }}
                                 >
                                     <option value={7}>7</option>
                                     <option value={10}>10</option>
@@ -150,16 +148,11 @@ const EndersomentTable = () => {
                                     <option value={75}>75</option>
                                     <option value={100}>100</option>
                                 </Input>
-                                <Label for='sort-select'>Entries</Label>
+                                <Label className='pl-1' for='sort-select'>Entries</Label>
                             </div>
                         </Col>
-                        <Col sm='4'>
 
-                        </Col>
-                        <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='3'>
-                            {/* <Label className='mr-1' for='search-input'>
-                            Search
-                        </Label> */}
+                        <Col xl='3'>
                             <Input
                                 className='dataTable-filter'
                                 type='text'
@@ -168,122 +161,132 @@ const EndersomentTable = () => {
                                 placeHolder='Search'
                                 value={searchValue}
                                 onChange={handleFilter}
+                                style={{ height: 40 }}
                             />
                         </Col>
-                        <Col sm='3'>
+
+                        <Col xl='3' lg='12'>
                             <Button.Ripple color='primary' onClick={() => setShowAddEndorsement(!showAddEndorsement)}>New Endersoment</Button.Ripple>
                         </Col>
                     </Row>
-                    {/* <DataTable
-                    noHeader
-                    pagination
-                    paginationServer
-                    className='react-dataTable'
-                    columns={serverSideColumns}
-                    sortIcon={<ChevronDown size={10} />}
-                    paginationComponent={CustomPagination}
-                    data={dataToRender()}
-                /> */}
+
                     <TableData />
                 </Card>
             </Fragment>
 
-            <div>
+            <div >
                 <Modal isOpen={showAddEndorsement} toggle={() => setShowAddEndorsement(!showAddEndorsement)} className='modal-dialog-centered'>
                     <ModalHeader toggle={() => setShowAddEndorsement(!showAddEndorsement)}>New Endorsement</ModalHeader>
                     <ModalBody>
                         <Row>
                             <Col md='12' sm='12'>
-                                <Label for='selectEmployeeID'>Select Employee ID</Label>
+                                <Label for='selectEmployeeID'><h5>Select Employee ID</h5></Label>
                                 <Input type='select' name='selcetEmployeeID' id='selectEmployeeID' />
                             </Col>
                         </Row>
-                        <Row className='pt-2'>
-                            <Col md='10'>
-                                <h5 style={{ padding: 10 }}>Unpaid Endorsement</h5>
-                                <div style={{ paddingLeft: 10 }}>
-                                    <small>Name</small><br />
-                                    <small>Email</small><br />
-                                    <small>Phone</small><br />
-                                    <small>Address</small>
-                                </div>
+                        <Row className='d-flex justify-content-space-between pt-2'>
+                            <Col xl='9'>
+                                <h5 >Unpaid Endorsement</h5>
+                                <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                    <li style={{ paddingBottom: 5 }}>Name</li>
+                                    <li style={{ paddingBottom: 5 }}>Email</li>
+                                    <li style={{ paddingBottom: 5 }}>Phone</li>
+                                    <li>Address</li>
+                                </ul>
                             </Col>
-                            <Col md='2'>
+                            <Col className='justify-content-start'>
                                 <CustomInput type='radio' id='unpaidEndorsement' name='unpaidEndorsement' />
-                                <div style={{ paddingTop: 20 }}>
+                                <div style={{ paddingTop: 10 }}>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='a'
+                                        name=''
                                         label=''
-                                        defaultChecked
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='b'
+                                        name=''
                                         label=''
-                                        defaultChecked
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='c'
+                                        name=''
                                         label=''
-                                        defaultChecked
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='d'
+                                        name=''
                                         label=''
-                                        defaultChecked
                                         inline
                                     />
                                 </div>
                             </Col>
                         </Row>
-                        <Row className='pt-2'>
-                            <Col md='10'>
-                                <h5 style={{ padding: 10 }}>Paid</h5>
-                                <div style={{ paddingLeft: 10 }}>
-                                    <small>Premium Amount</small><br />
-                                    <small>Premium Monthwise</small><br />
-                                    <small>Change in Nominee</small><br />
-                                    <small>Family Members</small>
-                                </div>
+
+                        <Row className='d-flex justify-content-space-between pt-2'>
+                            <Col xl='9'>
+                                <h5 >Paid</h5>
+                                <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                    <li style={{ paddingBottom: 5 }}>Premium Amount</li>
+                                    <li style={{ paddingBottom: 5 }}>Premium Monthwise</li>
+                                    <li style={{ paddingBottom: 5 }}>Change In Nominee</li>
+                                    <li>Family Members</li>
+                                </ul>
                             </Col>
-                            <Col md='2'>
+                            <Col className='justify-content-start'>
                                 <CustomInput type='radio' id='paid' name='paid' />
-                                <div style={{ paddingTop: 20 }}>
+                                <div style={{ paddingTop: 10 }}>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='e'
+                                        name=''
                                         label=''
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='f'
+                                        name=''
                                         label=''
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='g'
+                                        name=''
                                         label=''
                                         inline
                                     />
+                                </div>
+                                <div>
                                     <CustomInput
                                         type='checkbox'
                                         className='custom-control-Primary'
-                                        id='Primary'
+                                        id='h'
+                                        name=''
                                         label=''
                                         inline
                                     />
