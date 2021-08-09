@@ -1,10 +1,10 @@
 import React from 'react'
 import { Row, Col, Card, CardBody } from 'reactstrap'
 import { Users, Archive, File, Download } from 'react-feather'
-import processOK from '@src/assets/images/icons/processOK.png'
-import verifiedChecked from '@src/assets/images/icons/verifiedChecked.png'
-import fileCancelled from '@src/assets/images/icons/fileCancelled.png'
-import hourSandCircle from '@src/assets/images/icons/hourSandCircle.png'
+import transmitter from '@src/assets/images/icons/transmitter.png'
+import hospitalBed from '@src/assets/images/icons/hospitalBed.png'
+import hospital from '@src/assets/images/icons/hospital.png'
+import microscope from '@src/assets/images/icons/microscope.png'
 
 function ProvidersQuickAccess(props) {
     return (
@@ -19,7 +19,7 @@ function ProvidersQuickAccess(props) {
                                     <p className='card-text'>Providers</p>
                                 </div>
                                 <div>
-                                    <img src={processOK} />
+                                    <img src={transmitter} />
                                 </div>
                             </div>
                         </CardBody>
@@ -34,7 +34,7 @@ function ProvidersQuickAccess(props) {
                                     <p className='card-text'>Used</p>
                                 </div>
                                 <div>
-                                    <img src={verifiedChecked} />
+                                    <img src={hospitalBed} />
                                 </div>
                             </div>
                         </CardBody>
@@ -49,7 +49,7 @@ function ProvidersQuickAccess(props) {
                                     <p className='card-text'>Hospital</p>
                                 </div>
                                 <div>
-                                    <img src={fileCancelled} />
+                                    <img src={hospital} />
                                 </div>
                             </div>
                         </CardBody>
@@ -64,7 +64,7 @@ function ProvidersQuickAccess(props) {
                                     <p className='card-text'>Labs</p>
                                 </div>
                                 <div>
-                                    <img src={hourSandCircle} />
+                                    <img src={microscope} />
                                 </div>
                             </div>
                         </CardBody>

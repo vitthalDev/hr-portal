@@ -2,6 +2,7 @@ import { Fragment, useState } from "react"
 import { Mail, MessageSquare, Grid } from "react-feather"
 import { Navbar, NavItem, NavLink } from 'reactstrap'
 import { Link } from "react-router-dom"
+import grid from '@src/assets/images/icons/grid.png'
 import Logo from '@src/assets/images/logo/eOxegen logo.png'
 import insurance from '@src/assets/images/icons/insurance.png'
 import verify from '@src/assets/images/icons/verify.png'
@@ -25,12 +26,12 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('dashboard') }}
-              style={{ width: 200, marginLeft: -18 }}
+              style={{ width: 200, marginLeft: -10 }}
               className={active === 'dashboard' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard' style={{ color: active === 'dashboard' ? 'white' : '#625F6E' }}>
-                <Grid />
-                <span >Dashboard</span>
+                <img src={grid} height='20' width='20' />
+                <span style={{ paddingLeft: 5 }} >Dashboard</span>
               </Link>
             </div>
           </NavLink>
