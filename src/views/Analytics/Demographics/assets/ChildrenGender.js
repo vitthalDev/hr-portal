@@ -85,10 +85,10 @@ const ChildrenGender = props => {
                     <Col md='6' sm='12' className='pl-5' >
                         <h6>Children</h6>
                         <div>
-                            <Icon.Square size={15} color='#8448d9' style={{ backgroundColor: '#8448d9' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>51%</span>
+                            <Icon.Square size={15} color='#673AB7' style={{ backgroundColor: '#673AB7' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>51%</span>
                         </div>
                         <div>
-                            <Icon.Square size={15} color='#a57be0' style={{ backgroundColor: '#a57be0' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>49%</span>
+                            <Icon.Square size={15} color='#B295E4' style={{ backgroundColor: '#B295E4' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>49%</span>
                         </div>
                     </Col>
                     <Col md='6' sm='12' style={{ marginTop: -10 }}>

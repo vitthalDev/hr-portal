@@ -1,10 +1,10 @@
 import { React, Fragment, useState } from 'react'
 import { Row, Col, Card, CardBody, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, Input, CustomInput } from 'reactstrap'
 import { Users, Archive, File, Download, ChevronDown } from 'react-feather'
-import processOK from '@src/assets/images/icons/processOK.png'
-import verifiedChecked from '@src/assets/images/icons/verifiedChecked.png'
-import fileCancelled from '@src/assets/images/icons/fileCancelled.png'
-import hourSandCircle from '@src/assets/images/icons/hourSandCircle.png'
+import fileSheild from '@src/assets/images/icons/fileSheild.png'
+import heartCover from '@src/assets/images/icons/heartCover.png'
+import lifeCover from '@src/assets/images/icons/lifeCover.png'
+import addExtra from '@src/assets/images/icons/addExtra.png'
 
 function PoliciesQuickAccess(props) {
     const [basicModal, setBasicModal] = useState(false)
@@ -22,7 +22,7 @@ function PoliciesQuickAccess(props) {
                                     <p className='card-text' style={{ color: '#625F6E' }}>No. of Policies</p>
                                 </div>
                                 <div>
-                                    <img src={processOK} />
+                                    <img src={fileSheild} />
                                 </div>
                             </div>
                         </CardBody>
@@ -37,7 +37,7 @@ function PoliciesQuickAccess(props) {
                                     <p className='card-text' style={{ color: '#625F6E' }}>Health Cover</p>
                                 </div>
                                 <div>
-                                    <img src={verifiedChecked} />
+                                    <img src={heartCover} />
                                 </div>
                             </div>
                         </CardBody>
@@ -52,7 +52,7 @@ function PoliciesQuickAccess(props) {
                                     <p className='card-text' style={{ color: '#625F6E' }}>Life Cover</p>
                                 </div>
                                 <div>
-                                    <img src={fileCancelled} />
+                                    <img src={lifeCover} />
                                 </div>
                             </div>
                         </CardBody>
@@ -66,7 +66,7 @@ function PoliciesQuickAccess(props) {
                                     <h5 className='font-weight-bold mb-0 text-primary'>Request Policies</h5>
                                 </div>
                                 <div>
-                                    <img src={hourSandCircle} />
+                                    <img src={addExtra} />
                                 </div>
                             </div>
 
@@ -82,96 +82,138 @@ function PoliciesQuickAccess(props) {
                         <ModalBody>
                             <Row>
                                 <Col md='6'>
-                                    <h5 style={{ padding: 10 }}>Policy</h5>
+                                    <h5 style={{ paddingTop: 10 }}>Policy</h5>
                                 </Col>
                                 <Col md='6'>
-                                    <Input type='text' id='policy' placeholder='Rs' />
+                                    <Input style={{ width: 230, marginLeft: -15 }} type='text' id='policy' placeholder='Rs' />
                                 </Col>
                             </Row>
-                            <Row className='pt-2'>
-                                <Col md='10'>
-                                    <h5 style={{ padding: 10 }}>Health Cover</h5>
-                                    <div style={{ paddingLeft: 10 }}>
-                                        <small>OPD</small><br />
-                                        <small>Cashless</small><br />
-                                        <small>Home Service</small><br />
-                                        <small>Medicene Claim</small>
-                                    </div>
+                            <Row className='d-flex justify-content-space-between pt-2'>
+                                <Col xl='9'>
+                                    <h5 >Health Cover</h5>
+                                    <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                        <li style={{ paddingBottom: 5 }}>OPD</li>
+                                        <li style={{ paddingBottom: 5 }}>Cashless</li>
+                                        <li style={{ paddingBottom: 5 }}>HomeServices</li>
+                                        <li>Medicine claim</li>
+                                    </ul>
                                 </Col>
-                                <Col md='2'>
+                                <Col className='justify-content-start'>
                                     <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
-                                    <div style={{ paddingTop: 20 }}>
+                                    <div style={{ paddingTop: 10 }}>
                                         <CustomInput
                                             type='checkbox'
                                             className='custom-control-Primary'
-                                            id='Primary'
+                                            id='a'
+                                            name=''
                                             label=''
-                                            defaultChecked
                                             inline
                                         />
+                                    </div>
+                                    <div>
                                         <CustomInput
                                             type='checkbox'
                                             className='custom-control-Primary'
-                                            id='Primary'
+                                            id='b'
+                                            name=''
                                             label=''
-                                            defaultChecked
                                             inline
                                         />
+                                    </div>
+                                    <div>
                                         <CustomInput
                                             type='checkbox'
                                             className='custom-control-Primary'
-                                            id='Primary'
+                                            id='c'
+                                            name=''
                                             label=''
-                                            defaultChecked
                                             inline
                                         />
+                                    </div>
+                                    <div>
                                         <CustomInput
                                             type='checkbox'
                                             className='custom-control-Primary'
-                                            id='Primary'
+                                            id='d'
+                                            name=''
                                             label=''
-                                            defaultChecked
                                             inline
                                         />
                                     </div>
                                 </Col>
                             </Row>
-                            <Row className='pt-2'>
-                                <Col md='10'>
-                                    <h5 style={{ padding: 10 }}>Life Cover</h5>
-                                    <div style={{ paddingLeft: 10 }}>
-                                        <small>OPD</small><br />
-                                        <small>Cashless</small><br />
-                                        <small>Home Service</small><br />
-                                        <small>Medicene Claim</small>
-                                    </div>
+
+                            <Row className='d-flex justify-content-space-between pt-2'>
+                                <Col xl='9'>
+                                    <h5 >Life Cover</h5>
+                                    <ul style={{ listStyle: 'none', marginLeft: -40, paddingTop: 10 }}>
+                                        <li style={{ paddingBottom: 5 }}>Accident</li>
+                                        <li style={{ paddingBottom: 5 }}>Cashless</li>
+                                        <li style={{ paddingBottom: 5 }}>HomeServices</li>
+                                        <li>Medicine claim</li>
+                                    </ul>
                                 </Col>
-                                <Col md='2'>
-                                    <CustomInput type='radio' id='healthCoverage' name='healthCoverage' />
-                                    <div style={{ paddingTop: 20 }}>
-                                        <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                        <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                        <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
-                                        <CustomInput inline type='checkbox' id='exampleCustomCheckbox2' />
+                                <Col className='justify-content-start'>
+                                    <CustomInput type='radio' id='lifeCoverage' name='lifeCoverage' />
+                                    <div style={{ paddingTop: 10 }}>
+                                        <CustomInput
+                                            type='checkbox'
+                                            className='custom-control-Primary'
+                                            id='e'
+                                            name=''
+                                            label=''
+                                            inline
+                                        />
+                                    </div>
+                                    <div>
+                                        <CustomInput
+                                            type='checkbox'
+                                            className='custom-control-Primary'
+                                            id='f'
+                                            name=''
+                                            label=''
+                                            inline
+                                        />
+                                    </div>
+                                    <div>
+                                        <CustomInput
+                                            type='checkbox'
+                                            className='custom-control-Primary'
+                                            id='g'
+                                            name=''
+                                            label=''
+                                            inline
+                                        />
+                                    </div>
+                                    <div>
+                                        <CustomInput
+                                            type='checkbox'
+                                            className='custom-control-Primary'
+                                            id='h'
+                                            name=''
+                                            label=''
+                                            inline
+                                        />
                                     </div>
                                 </Col>
                             </Row>
-                            <Row>
+
+                            <Row className='mt-2'>
                                 <Col md='6'>
-                                    <h5 style={{ padding: 10 }}>Approximate Members</h5>
+                                    <h5 style={{ paddingTop: 10 }}>Approximate Members</h5>
                                 </Col>
                                 <Col md='6'>
-                                    <Input type='text' id='policy' placeholder='' />
+                                    <Input style={{ width: 230, marginLeft: -15 }} type='text' id='policy' placeholder='' />
                                 </Col>
                             </Row>
-                            <Row>
+                            <Row className='mt-2'>
                                 <Col md='5'>
-                                    <h5 style={{ padding: 10 }}>Additional Family Members</h5>
+                                    <h5 style={{ paddingTop: 10 }}>Additional Family Members</h5>
                                 </Col>
                                 <Col md='7'>
-                                    <div className='d-flex justify-content-between'>
-                                        <Button color='relief-primary' ><small>Adults</small><ChevronDown /></Button>
-                                        <Button color='relief-primary'><small>Children</small><ChevronDown /></Button>
+                                    <div className='d-flex justify-content-end'>
+                                        <Button style={{ height: 45 }} color='relief-primary' ><small>Adults</small><ChevronDown /></Button>
+                                        <Button style={{ height: 45, marginLeft: 5 }} color='relief-primary'><small>Children</small><ChevronDown /></Button>
                                     </div>
                                 </Col>
                             </Row>

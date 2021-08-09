@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Card, CardTitle, CardBody, Label, Input } from 'reactstrap'
+import { Row, Col, Card, CardTitle, CardBody, Label, Input, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import * as Icons from 'react-feather'
 import Avatar from '@components/avatar'
 import DemographicsOne from './Data/DemographicsOne'
@@ -25,13 +25,29 @@ function Demographics(props) {
 
                                 </Col>
                                 <Col md='3' sm='12'>
-                                    <div className='bg-light-primary' style={{ width: 170, borderRadius: 50, marginTop: 20 }}>
-                                        <Icons.ChevronLeft onClick={() => setActive('one')} style={{ paddingRight: 0, cursor: 'pointer' }} />
-                                        <Avatar onClick={() => setActive('one')} color={active === 'one' ? 'primary' : ''} content='1' style={{ marginRight: 12, padding: 0 }} />
-                                        <Avatar onClick={() => setActive('two')} color={active === 'two' ? 'primary' : ''} content='2' style={{ marginRight: 12, padding: 0 }} />
-                                        <Avatar onClick={() => setActive('three')} color={active === 'three' ? 'primary' : ''} content='3' style={{ marginRight: 12, padding: 0 }} />
-                                        <Icons.ChevronRight onClick={() => setActive('three')} style={{ marginLeft: -10, cursor: 'pointer' }} />
-                                    </div>
+                                    <Pagination className='d-flex justify-content-end mt-3'>
+                                        <PaginationItem>
+                                            <PaginationLink onClick={() => setActive('one')} href='#'><Icons.ChevronsLeft size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink onClick={() => setActive('one')} href='#'><Icons.ChevronLeft size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem className={active === 'one' ? 'active' : ''}>
+                                            <PaginationLink onClick={() => setActive('one')} href='#'>1</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem className={active === 'two' ? 'active' : ''} >
+                                            <PaginationLink onClick={() => setActive('two')} href='#'>2</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem className={active === 'three' ? 'active' : ''} >
+                                            <PaginationLink onClick={() => setActive('three')} href='#'>3</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink onClick={() => setActive('three')} href='#'><Icons.ChevronRight size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink onClick={() => setActive('three')} href='#'><Icons.ChevronsRight size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                    </Pagination>
                                 </Col>
                             </Row>
                         </CardBody>

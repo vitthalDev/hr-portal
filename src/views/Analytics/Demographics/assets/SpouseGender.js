@@ -38,7 +38,7 @@ const SpouseGender = props => {
         stroke: { width: 0 },
         colors: [props.primary, props.warning, props.danger, props.success]
     },
-        series2 = [98, 2]
+        series2 = [50, 50]
 
     const renderChartInfo = () => {
         return data.chart_info.map((item, index) => {
@@ -85,10 +85,10 @@ const SpouseGender = props => {
                     <Col md='6' sm='12' className='pl-5' >
                         <h6>Spouse</h6>
                         <div>
-                            <Icon.Square size={15} color='#ebcd60' style={{ backgroundColor: '#ebcd60' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>98%</span>
+                            <Icon.Square size={15} color='#FFA726' style={{ backgroundColor: '#FFA726' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>50%</span>
                         </div>
                         <div>
-                            <Icon.Square size={15} color='#c7ac4a' style={{ backgroundColor: '#c7ac4a' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>02%</span>
+                            <Icon.Square size={15} color='#FFCB7E' style={{ backgroundColor: '#FFCB7E' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>50%</span>
                         </div>
                     </Col>
                     <Col md='6' sm='12' style={{ marginTop: -10 }}>

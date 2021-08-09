@@ -132,8 +132,8 @@ function MainDashboard(props) {
                                     <p className='card-text'>E card issued</p>
                                 </div>
                                 <div className='avatar avatar-stats p-50 m-0 bg-light-success'>
-                                    {/* <img src={cloudDownload} style={{ height: 30, width: 30 }} /> */}
-                                    <DownloadCloud size={30} />
+                                    <img src={cloudDownload} style={{ height: 30, width: 30 }} />
+                                    {/* <DownloadCloud size={30} /> */}
                                 </div>
                             </div>
                         </CardBody>
@@ -155,9 +155,9 @@ function MainDashboard(props) {
                                             <div >
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 1</span>
                                             </div>
-                                            <div style={{ paddingLeft: 20 }}>
-                                                <img src={male1} style={{ height: 25, width: 10 }} /><small style={{ color: '#0AC9C4' }}>40</small>
-                                                <img src={female1} style={{ height: 25, width: 10 }} /><small style={{ color: '#34A3EC' }}>20</small>
+                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
+                                                <img src={male1} style={{ height: 25, width: 10 }} /><small style={{ color: '#0AC9C4', paddingLeft: 5 }}>40</small>
+                                                <img src={female1} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#34A3EC', paddingLeft: 5 }}>20</small>
                                             </div>
                                             <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
                                                 <PlanOne
@@ -182,9 +182,9 @@ function MainDashboard(props) {
                                             <div>
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 2</span>
                                             </div>
-                                            <div style={{ paddingLeft: 20 }}>
-                                                <img src={male2} style={{ height: 25, width: 10 }} /><small style={{ color: '#FF730C' }}>23</small>
-                                                <img src={female2} style={{ height: 25, width: 10 }} /><small style={{ color: '#FCBF55' }}>20</small>
+                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
+                                                <img src={male2} style={{ height: 25, width: 10 }} /><small style={{ color: '#FF730C', paddingLeft: 5 }}>23</small>
+                                                <img src={female2} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#FCBF55', paddingLeft: 5 }}>20</small>
                                             </div>
                                             <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
                                                 <PlanTwo
@@ -209,14 +209,14 @@ function MainDashboard(props) {
                                             <div>
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 3</span>
                                             </div>
-                                            <div style={{ paddingLeft: 20 }}>
-                                                <img src={male3} style={{ height: 25, width: 10 }} /><small style={{ color: '#009EFF' }}>18</small>
-                                                <img src={female3} style={{ height: 25, width: 10 }} /><small style={{ color: '#00F1FF' }}>10</small>
+                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
+                                                <img src={male3} style={{ height: 25, width: 10 }} /><small style={{ color: '#009EFF', paddingLeft: 5 }}>18</small>
+                                                <img src={female3} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#00F1FF', paddingLeft: 5 }}>10</small>
                                             </div>
                                             <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
                                                 <PlanThree
-                                                    primary='#FF730C'
-                                                    warning='#FCBF55'
+                                                    primary='#009EFF'
+                                                    warning='#00F1FF'
                                                 />
                                             </div>
                                         </Col>
@@ -236,9 +236,9 @@ function MainDashboard(props) {
                                             <div>
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 4</span>
                                             </div>
-                                            <div style={{ paddingLeft: 20 }}>
-                                                <img src={male4} style={{ height: 25, width: 10 }} /><small style={{ color: '#8A44FF' }}>10</small>
-                                                <img src={female4} style={{ height: 25, width: 10 }} /><small style={{ color: '#E19BFF' }}>05</small>
+                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
+                                                <img src={male4} style={{ height: 25, width: 10 }} /><small style={{ color: '#8A44FF', paddingLeft: 5 }}>10</small>
+                                                <img src={female4} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#E19BFF', paddingLeft: 5 }}>05</small>
                                             </div>
                                             <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
                                                 <PlanFour

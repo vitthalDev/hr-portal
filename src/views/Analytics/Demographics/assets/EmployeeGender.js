@@ -38,7 +38,7 @@ const GenderWiseSession = props => {
         stroke: { width: 0 },
         colors: [props.primary, props.warning, props.danger, props.success]
     },
-        series1 = [98, 2]
+        series1 = [68, 42]
 
     const renderChartInfo = () => {
         return data.chart_info.map((item, index) => {
@@ -85,13 +85,13 @@ const GenderWiseSession = props => {
                     <Col md='6' sm='12' className='mt-2 pl-5'>
                         <h6>Employes</h6>
                         <div>
-                            <Icon.Square size={15} color='#84D0FF' style={{ backgroundColor: '#84D0FF' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>96%</span>
+                            <Icon.Square size={15} color='#09CEC9' style={{ backgroundColor: '#09CEC9' }} /><span className='pr-1' style={{ fontSize: 10 }}>Male</span><span style={{ fontSize: 12, paddingLeft: 33 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>68%</span>
                         </div>
                         <div>
-                            <Icon.Square size={15} color='B2FFFF' style={{ backgroundColor: '#B2FFFF' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>04%</span>
+                            <Icon.Square size={15} color='#34A3EC' style={{ backgroundColor: '#34A3EC' }} /><span className='pr-1' style={{ fontSize: 10 }}>Female</span><span style={{ fontSize: 12, paddingLeft: 20 }}>-</span><span style={{ fontSize: 12, paddingLeft: 10 }}>42%</span>
                         </div>
                     </Col>
-                    <Col md='6' sm='12'>
+                    <Col md='6' sm='12' style={{ paddingTop: 15 }}>
                         <Chart className='my-1' options={employees} series={series1} type='donut' height={100} />
                     </Col>
                 </Row>

@@ -1,8 +1,8 @@
 import { React, useContext, useState } from 'react'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, Table, Badge, Label, Input, Form, FormGroup, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, CustomInput } from 'reactstrap'
+import { Row, Col, Card, CardHeader, CardTitle, CardBody, Table, Badge, Label, Input, Form, FormGroup, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, CustomInput, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import { useRTL } from '@hooks/useRTL'
 import Avatar from '@components/avatar'
-import { MapPin, Info, Download, File, Circle } from 'react-feather'
+import { MapPin, Info, Download, File, Circle, ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft } from 'react-feather'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
 import { useSkin } from '@hooks/useSkin'
 import CashlessVSRemClaims from './Assets/CashlessVSRemClaims'
@@ -40,10 +40,10 @@ function PastClaims(props) {
                 </Col>
                 <Col md='6' sm='12'>
                     <TopBenefitsUtilized
-                        primary={context.colors.primary.main}
-                        warning={context.colors.warning.main}
-                        danger={context.colors.danger.main}
-                        success={context.colors.success.main}
+                        primary='#826AF9'
+                        warning='#9F87FF'
+                        danger='#D3B3FF'
+                        success='#F8D3FF'
                     />
                 </Col>
             </Row>
@@ -51,18 +51,19 @@ function PastClaims(props) {
                 <Col md='12' sm='12'>
                     <Card>
                         <CardHeader>
-                            <CardTitle tag='h6'>Past Claims</CardTitle><br />
+                            <CardTitle className='ml-1' tag='span'>Past Claims</CardTitle>
                         </CardHeader>
-                        <Row className='mx-0 mt-1 mb-50'>
-                            <Col sm='2'>
-                                <div className='d-flex align-items-center'>
-                                    <Label for='sort-select'>show</Label>
+                        <Row className='mx-0 my-0 mt-0 mb-0 ml-2 mr-1'>
+                            <Col xl='8' lg='12'>
+                                <div className='d-flex justify-content-star align-items-center'>
+                                    <Label className='pr-1 font-weight-bold' for='sort-select'>show</Label>
                                     <Input
                                         className='dataTable-select'
                                         type='select'
                                         id='sort-select'
                                         // value={rowsPerPage}
                                         onChange={e => handlePerPage(e)}
+                                        style={{ width: 70 }}
                                     >
                                         <option value={7}>7</option>
                                         <option value={10}>10</option>
@@ -71,26 +72,23 @@ function PastClaims(props) {
                                         <option value={75}>75</option>
                                         <option value={100}>100</option>
                                     </Input>
-                                    <Label for='sort-select'>Entries</Label>
+                                    <Label className='pl-1 font-weight-bold' for='sort-select'>Entries</Label>
                                 </div>
                             </Col>
-                            <Col sm='7'>
 
-                            </Col>
-                            <Col className='d-flex align-items-center justify-content-sm-end mt-sm-0 mt-1' sm='3'>
-                                {/* <Label className='mr-1' for='search-input'>
-                            Search
-                        </Label> */}
+                            <Col xl='4'>
                                 <Input
                                     className='dataTable-filter'
                                     type='text'
                                     bsSize='sm'
                                     id='search-input'
                                     placeHolder='Search'
-                                // value={searchValue}
-                                // onChange={handleFilter}
+                                    // value={searchValue}
+                                    // onChange={handleFilter}
+                                    style={{ height: 40, marginLeft: 0 }}
                                 />
                             </Col>
+
                         </Row>
                         <CardBody>
                             <Table size='sm' responsive>
@@ -219,6 +217,44 @@ function PastClaims(props) {
                                     </tr>
                                 </tbody>
                             </Table>
+                            <Row>
+                                <Col xl='6'>
+                                    <div style={{ paddingTop: 25, marginLeft: 10 }}>
+                                        <span>showing 1 to 6 of 130 entries</span>
+                                    </div>
+                                </Col>
+                                <Col xl='6'>
+                                    <Pagination className='d-flex justify-content-end mt-1 mr-1'>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'><ChevronsLeft size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'><ChevronLeft size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem active>
+                                            <PaginationLink href='#'>1</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'>2</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'>3</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'>4</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'>5</PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'><ChevronRight size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                        <PaginationItem>
+                                            <PaginationLink href='#'><ChevronsRight size={18} /></PaginationLink>
+                                        </PaginationItem>
+                                    </Pagination>
+                                </Col>
+                            </Row>
                         </CardBody>
                     </Card>
                 </Col>

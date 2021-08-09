@@ -3,10 +3,9 @@ import { Row, Col, Card, CardBody } from 'reactstrap'
 import { Users, Archive, File, Download } from 'react-feather'
 import Avatar from '@components/avatar'
 import group from '@src/assets/images/icons/group.png'
-import male3 from '@src/assets/images/icons/male3.png'
-import female3 from '@src/assets/images/icons/female3.png'
+import blueMale from '@src/assets/images/icons/blueMale.png'
+import redFemale from '@src/assets/images/icons/redFemale.png'
 import cloudDownload from '@src/assets/images/icons/cloudDownload.png'
-import hourSandCircle from '@src/assets/images/icons/hourSandCircle.png'
 
 function EmployeesQuickAccess(props) {
     return (
@@ -36,7 +35,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>Male</p>
                                 </div>
                                 <div>
-                                    <Avatar img={male3} />
+                                    <Avatar img={blueMale} />
                                 </div>
                             </div>
                         </CardBody>
@@ -51,7 +50,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>Female</p>
                                 </div>
                                 <div>
-                                    <Avatar img={female3} />
+                                    <Avatar img={redFemale} />
                                 </div>
                             </div>
                         </CardBody>
@@ -66,7 +65,7 @@ function EmployeesQuickAccess(props) {
                                     <p className='card-text'>E-Card Issued</p>
                                 </div>
                                 <div className='avatar avatar-stats p-50 m-0 bg-light-success'>
-                                    <img src={cloudDownload} width='35' height='30' />
+                                    <img src={cloudDownload} height='30' width='30' />
                                 </div>
                             </div>
                         </CardBody>

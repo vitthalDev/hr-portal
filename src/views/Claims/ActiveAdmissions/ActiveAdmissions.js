@@ -1,10 +1,10 @@
 import { React, useContext, Fragment, useState } from 'react'
-import { Row, Col, Table, Badge, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, CustomInput } from 'reactstrap'
+import { Row, Col, Table, Badge, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label, Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert, CustomInput, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import Avatar from '@components/avatar'
 import { useRTL } from '@hooks/useRTL'
 import { useSkin } from '@hooks/useSkin'
 import { ThemeColors } from '@src/utility/context/ThemeColors'
-import { MapPin, Info, Download, File, Circle } from 'react-feather'
+import { MapPin, Info, Download, File, Circle, ChevronRight, ChevronLeft, ChevronsRight, ChevronsLeft } from 'react-feather'
 import OverallClaims from './Assets/OverallClaims'
 import OverallClaimsCost from './Assets/OverallClaimCost'
 import ClaimStatus from './Assets/ClaimStatus'
@@ -35,6 +35,43 @@ function ActiveAdmissions() {
             <Row>
                 <Col md='12' sm='12'>
                     <Card>
+                        <Row className='mx-0 mt-1 mb-1 ml-1 mr-1'>
+                            <Col xl='8' lg='12'>
+                                <div className='d-flex justify-content-star align-items-center'>
+                                    <Label className='pr-1' for='sort-select'>show</Label>
+                                    <Input
+                                        className='dataTable-select'
+                                        type='select'
+                                        id='sort-select'
+                                        // value={rowsPerPage}
+                                        onChange={e => handlePerPage(e)}
+                                        style={{ width: 70 }}
+                                    >
+                                        <option value={7}>7</option>
+                                        <option value={10}>10</option>
+                                        <option value={25}>25</option>
+                                        <option value={50}>50</option>
+                                        <option value={75}>75</option>
+                                        <option value={100}>100</option>
+                                    </Input>
+                                    <Label className='pl-1' for='sort-select'>Entries</Label>
+                                </div>
+                            </Col>
+
+                            <Col xl='4'>
+                                <Input
+                                    className='dataTable-filter'
+                                    type='text'
+                                    bsSize='sm'
+                                    id='search-input'
+                                    placeHolder='Search'
+                                    // value={searchValue}
+                                    // onChange={handleFilter}
+                                    style={{ height: 40, marginLeft: 0 }}
+                                />
+                            </Col>
+
+                        </Row>
                         <Table size='sm' responsive>
                             <thead>
                                 <tr className='text-center'>
@@ -161,6 +198,45 @@ function ActiveAdmissions() {
                                 </tr>
                             </tbody>
                         </Table>
+                        <Row>
+                            <Col xl='6'>
+                                <div style={{ paddingTop: 25, marginLeft: 10 }}>
+                                    <span>showing 1 to 6 of 130 entries</span>
+                                </div>
+                            </Col>
+                            <Col xl='6'>
+                                <Pagination className='d-flex justify-content-end mt-1 mr-1'>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'><ChevronsLeft size={18} /></PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'><ChevronLeft size={18} /></PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem active>
+                                        <PaginationLink href='#'>1</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'>2</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'>3</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'>4</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'>5</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'><ChevronRight size={18} /></PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href='#'><ChevronsRight size={18} /></PaginationLink>
+                                    </PaginationItem>
+                                </Pagination>
+                            </Col>
+                        </Row>
+
                     </Card>
                 </Col>
             </Row>
@@ -192,40 +268,36 @@ function ActiveAdmissions() {
                 <Modal isOpen={showRequiredDocuments} toggle={() => setShowRequiredDocuments(!showRequiredDocuments)} className='modal-dialog-centered'>
                     <ModalHeader toggle={() => setShowRequiredDocuments(!showRequiredDocuments)}>Documents Required</ModalHeader>
                     <ModalBody>
-                        <Card>
-                            <CardBody>
-                                <Form>
-                                    <Row>
-                                        <Col md='6' sm='12'>
-                                            <FormGroup>
-                                                <Label for=''>Document 1</Label>
-                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
-                                            </FormGroup>
-                                        </Col>
-                                        <Col md='6' sm='12'>
-                                            <FormGroup>
-                                                <Label for=''>Document 2</Label>
-                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
-                                            </FormGroup>
-                                        </Col>
-                                    </Row>
-                                    <Row>
-                                        <Col md='6' sm='12'>
-                                            <FormGroup>
-                                                <Label for=''>Document 3</Label>
-                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
-                                            </FormGroup>
-                                        </Col>
-                                        <Col md='6' sm='12'>
-                                            <FormGroup>
-                                                <Label for=''>Document 4</Label>
-                                                <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
-                                            </FormGroup>
-                                        </Col>
-                                    </Row>
-                                </Form>
-                            </CardBody>
-                        </Card>
+                        <Form>
+                            <Row>
+                                <Col md='6' sm='12'>
+                                    <FormGroup>
+                                        <Label for=''>Document 1</Label>
+                                        <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                    </FormGroup>
+                                </Col>
+                                <Col md='6' sm='12'>
+                                    <FormGroup>
+                                        <Label for=''>Document 2</Label>
+                                        <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md='6' sm='12'>
+                                    <FormGroup>
+                                        <Label for=''>Document 3</Label>
+                                        <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                    </FormGroup>
+                                </Col>
+                                <Col md='6' sm='12'>
+                                    <FormGroup>
+                                        <Label for=''>Document 4</Label>
+                                        <CustomInput type='file' id='exampleCustomFileBrowser' name='customFile' />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                        </Form>
                     </ModalBody>
                     <ModalFooter>
                         <Button color='flat-primary' onClick={() => setShowRequiredDocuments(!showRequiredDocuments)}>

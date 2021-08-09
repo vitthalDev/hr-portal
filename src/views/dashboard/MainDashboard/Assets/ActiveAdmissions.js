@@ -41,7 +41,7 @@ const ActiveAdmissions = () => {
                         },
                         total: {
                             show: true,
-                            fontSize: '1.5rem',
+                            fontSize: '1.2rem',
                             label: 'Total :admissions',
                             formatter(w) {
                                 return '31'

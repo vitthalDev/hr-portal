@@ -25,7 +25,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('dashboard') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -18 }}
               className={active === 'dashboard' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard' style={{ color: active === 'dashboard' ? 'white' : '#625F6E' }}>
@@ -38,7 +38,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('policies') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -25 }}
               className={active === 'policies' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/policies' style={{ color: active === 'policies' ? 'white' : '#625F6E' }}>
@@ -51,7 +51,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('endorsement') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -3 }}
               className={active === 'endorsement' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/endorsement' style={{ color: active === 'endorsement' ? 'white' : '#625F6E' }}>
@@ -64,7 +64,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('employees') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -12 }}
               className={active === 'employees' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/employees' style={{ color: active === 'employees' ? 'white' : '#625F6E' }}>
@@ -77,7 +77,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('claims') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -28 }}
               className={active === 'claims' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/claims' style={{ color: active === 'claims' ? 'white' : '#625F6E' }}>
@@ -90,7 +90,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('providers') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -18 }}
               className={active === 'providers' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/providers' style={{ color: active === 'providers' ? 'white' : '#625F6E' }}>
@@ -103,7 +103,7 @@ const Menu = props => {
           <NavLink>
             <div
               onClick={() => { setActive('analytics') }}
-              style={{ width: 200 }}
+              style={{ width: 200, marginLeft: -18 }}
               className={active === 'analytics' ? 'text-center colors-container bg-gradient-primary rounded text-black  d-flex align-items-center justify-content-center shadow' : 'text-center colors-container bg-gradient-light rounded text-black  d-flex align-items-center justify-content-center '}
             >
               <Link to='/dashboard/analytics' style={{ color: active === 'analytics' ? 'white' : '#625F6E' }}>
