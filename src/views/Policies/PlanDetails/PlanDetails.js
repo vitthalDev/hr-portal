@@ -1,7 +1,10 @@
 import React from 'react'
 import Cleave from 'cleave.js/react'
 import { Row, Col, Card, CardHeader, CardTitle, CardBody, CardText, FormGroup, Input, Form, Button, Label, CustomInput } from 'reactstrap'
-
+import phonePe from '@src/assets/images/icons/phonePe.png'
+import gpay from '@src/assets/images/icons/gpay.png'
+import bhim from '@src/assets/images/icons/bhim.png'
+import PayPal from '@src/assets/images/icons/PayPal.png'
 
 function PlanDetails(props) {
     return (
@@ -133,16 +136,15 @@ function PlanDetails(props) {
                                                         id='phonePay'
                                                         name='payment'
                                                         label='phone'
-                                                        defaultChecked
                                                         inline
                                                     />
+                                                    <img src={phonePe} style={{ marginLeft: -15, paddingRight: 10 }} />
                                                     <CustomInput
                                                         type='radio'
                                                         className='custom-control-primary'
                                                         id='gPay'
                                                         name='payment'
-                                                        label='GPay'
-                                                        defaultChecked
+                                                        label={<div style={{ marginLeft: -5 }}><img src={gpay} style={{ marginLeft: 0, paddingRight: 10 }} /><span style={{ marginLeft: -10 }}>Pay</span></div>}
                                                         inline
                                                     />
                                                     <CustomInput
@@ -151,16 +153,15 @@ function PlanDetails(props) {
                                                         id='bhim'
                                                         name='payment'
                                                         label='Bhim'
-                                                        defaultChecked
                                                         inline
                                                     />
+                                                    <img src={bhim} style={{ marginLeft: -20, paddingRight: 10 }} />
                                                     <CustomInput
                                                         type='radio'
                                                         className='custom-control-primary'
                                                         id='paypal'
                                                         name='payment'
-                                                        label='PayPal'
-                                                        defaultChecked
+                                                        label={<div style={{ marginLeft: -5 }}><img src={PayPal} style={{ marginLeft: -10, paddingRight: 10 }} /><span style={{ marginLeft: -20 }}>PayPal</span></div>}
                                                         inline
                                                     />
                                                     <CustomInput

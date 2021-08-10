@@ -404,7 +404,7 @@ const PoliciesTable = () => {
                             Cancel
                         </Button>{' '}
                         <Button color='flat-primary' onClick={() => setShowAddPolicy(!showAddPolicy)}>
-                            Download
+                            Submit
                         </Button>{' '}
                     </ModalFooter>
                 </Modal>
