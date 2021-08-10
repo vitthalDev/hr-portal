@@ -95,7 +95,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>Manager</td>
                                     <td style={{ fontSize: 12 }}>20 Jan 2021</td>
@@ -113,7 +113,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>tax Consultant</td>
                                     <td style={{ fontSize: 12 }}>02 Jan 2021</td>
@@ -131,7 +131,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Manpada Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>Developer</td>
                                     <td style={{ fontSize: 12 }}>21 Feb 2021</td>
@@ -149,7 +149,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>All India Institute of Medical Science</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Grant Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>Manager</td>
                                     <td style={{ fontSize: 12 }}>20 Jan 2021</td>
@@ -167,7 +167,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>Christian Medical College</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>tax Consultant</td>
                                     <td style={{ fontSize: 12 }}>02 Jan 2021</td>
@@ -185,7 +185,7 @@ function ActiveAdmissions() {
                                     </td>
                                     <td style={{ width: 250 }}>
                                         <u style={{ fontSize: 12 }}>tata Memorial Hospital</u><br />
-                                        <MapPin color={'red'} size={14} /><span style={{ fontSize: 10 }}>Charni Road Mumbai- 4200002</span>
+                                        <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
                                     </td>
                                     <td style={{ fontSize: 12 }}>Developer</td>
                                     <td style={{ fontSize: 12 }}>21 Feb 2021</td>

@@ -117,7 +117,7 @@ const TableSmall = () => {
       <tbody>
         <tr style={{ height: 60 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }}>
               <Avatar img={avatar1} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
@@ -125,8 +125,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>All India Institute Of Medical Science</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Grant Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>All India Institute Of Medical Science</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Grant Road, Mumbai -400002</small>
           </td>
           <td>
             <h5>Manager</h5>
@@ -143,7 +143,7 @@ const TableSmall = () => {
         </tr>
         <tr style={{ height: 60 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }} >
               <Avatar img={avatar2} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Nikhil D</h5>
@@ -151,8 +151,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>Christian Medical College</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Charni Road Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>Christian Medical College</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
           </td>
           <td>
             <h5>tax Consultant</h5>
@@ -169,7 +169,7 @@ const TableSmall = () => {
         </tr>
         <tr style={{ height: 60 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }}>
               <Avatar img={avatar3} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Pradeep Saxena</h5>
@@ -177,8 +177,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>Tata Memoruial Hospital</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Manpada Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>Tata Memoruial Hospital</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Manpada Road, Mumbai -400003</small>
           </td>
           <td>
             <h5>Designer</h5>
@@ -195,7 +195,7 @@ const TableSmall = () => {
         </tr>
         <tr style={{ height: 60 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }}>
               <Avatar img={avatar4} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Vishal Sahu</h5>
@@ -203,8 +203,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>Lilavati Hospital</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Manpada Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>Lilavati Hospital</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Grant Road, Mumbai -400001</small>
           </td>
           <td>
             <h5>Senior manager</h5>
@@ -221,7 +221,7 @@ const TableSmall = () => {
         </tr>
         <tr style={{ height: 60 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }}>
               <Avatar img={avatar5} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
@@ -229,8 +229,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>All India Institute Of Medical Science</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Grant Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>All India Institute Of Medical Science</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Charni Road, Mumbai -400001</small>
           </td>
           <td>
             <h5>Manager</h5>
@@ -247,7 +247,7 @@ const TableSmall = () => {
         </tr>
         <tr style={{ height: 40 }}>
           <td>
-            <Media>
+            <Media style={{ marginTop: 10 }}>
               <Avatar img={avatar6} />
               <Media body>
                 <h5 style={{ fontSize: 10, padding: 10, color: '#9B9B9B' }}>Rahul Saxena</h5>
@@ -255,8 +255,8 @@ const TableSmall = () => {
             </Media>
           </td>
           <td>
-            <h5 style={{ fontSize: 12 }}>All India Institute Of Medical Science</h5>
-            <small style={{ fontSize: 10, padding: 5 }}><MapPin size='12' style={{ color: 'red' }} />Grant Road, Mumbai - 4000000</small>
+            <h5 style={{ fontSize: 12, marginBottom: -3 }}>All India Institute Of Medical Science</h5>
+            <MapPin size='12' style={{ color: 'red', marginRight: 5 }} /><small>Manpada Road, Mumbai -400003</small>
           </td>
           <td>
             <h5>Manager</h5>
