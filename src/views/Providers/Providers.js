@@ -1,13 +1,27 @@
 import React from 'react'
 import Avatar from '@components/avatar'
+import { Link } from 'react-router-dom'
 import { MapPin, Info, Download, File, Circle } from 'react-feather'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label, Table, Badge } from 'reactstrap'
+import { Row, Col, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label, Table, Badge, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 import ProvidersQuickAccess from './QuickAccess/ProvidersQuickAccess'
+import grid from '@src/assets/images/icons/grid.png'
 
 function Providers(props) {
     return (
         <>
-            <Row>
+            <div style={{ marginLeft: 5 }}>
+                <React.Fragment>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <Link to='/'> <img src={grid} height='20' width='20' /> </Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active >
+                            <span>Providers</span>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </React.Fragment>
+            </div>
+            <Row className='mt-1' >
                 <Col md='12' sm='12'>
                     <ProvidersQuickAccess />
                 </Col>

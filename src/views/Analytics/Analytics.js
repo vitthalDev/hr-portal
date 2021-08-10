@@ -1,15 +1,28 @@
 import React from 'react'
 import Breadcrumbs from '@components/breadcrumbs'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Breadcrumb, BreadcrumbItem } from 'reactstrap'
+import { Link } from 'react-router-dom'
 import Demographics from './Demographics/Demographics'
 import ClaimAnalysis from './ClaimAnalysis/ClaimAnalysis'
+import grid from '@src/assets/images/icons/grid.png'
 
 function Analytics(props) {
     const [active, setActive] = React.useState("demographics")
     return (
         <>
-            <Breadcrumbs breadCrumbTitle='Analytics' breadCrumbParent='Analytics' />
-            <div className="row text-center" style={{ height: 45 }}>
+            <div style={{ marginLeft: 5 }}>
+                <React.Fragment>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <Link to='/'> <img src={grid} height='20' width='20' /> </Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active >
+                            <span>Analytics</span>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </React.Fragment>
+            </div>
+            <div className="row text-center mt-1" style={{ height: 45 }}>
                 <div className="col-lg-2">
                     <div
                         className={

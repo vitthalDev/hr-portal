@@ -1,9 +1,11 @@
-import { React, useState } from 'react'
+import { React, useState, Fragment } from 'react'
 import Avatar from '@components/avatar'
 import avatarImg from '@src/assets/images/portrait/small/avatar-s-1.jpg'
 import { Layout, Calendar, Phone, Mail, MapPin, User, Edit, Edit2, Trash, Trash2 } from 'react-feather'
-import { Row, Col, CardGroup, Card, FormGroup, Input, Form, Label, CardImg, CardBody, CardTitle, CardText, CardFooter, Button, ButtonGroup, Badge, Table, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap'
+import { Row, Col, CardGroup, Card, FormGroup, Input, Form, Label, CardImg, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, CardText, CardFooter, Button, ButtonGroup, Badge, Table, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap'
 import CardHeader from 'reactstrap/lib/CardHeader'
+import { Link } from 'react-router-dom'
+import grid from '@src/assets/images/icons/grid.png'
 
 function EmployeesProfile(props) {
     const [showEditProfile, setShowEditProfile] = useState(false)
@@ -13,6 +15,21 @@ function EmployeesProfile(props) {
     const [showEmergencyDetail, setShowEmergencyDetail] = useState(false)
     return (
         <>
+            <div className='mt-1 mb-1'>
+                <Fragment>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <Link to='/'> <img src={grid} height='20' width='20' /> </Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem >
+                            <Link to='/dashboard/employees'>Employees</Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active >
+                            <span>Profile</span>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </Fragment>
+            </div>
             <Row>
                 <Col md='9'>
                     <Card>

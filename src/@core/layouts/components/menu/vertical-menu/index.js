@@ -64,7 +64,9 @@ const Sidebar = props => {
         ) : (
           <Fragment>
             {/* Vertical Menu Header */}
-            {/* <VerticalMenuHeader setGroupOpen={setGroupOpen} menuHover={menuHover} {...props} /> */}
+            <div >
+              <VerticalMenuHeader setGroupOpen={setGroupOpen} menuHover={menuHover} {...props} />
+            </div>
             {/* Vertical Menu Header Shadow */}
             <div className='shadow-bottom' ref={shadowRef}></div>
             {/* Perfect Scrollbar */}

@@ -187,7 +187,7 @@ const EndorsementCharts = () => {
                 </Col>
                 <Col xl='6' sm='12'>
                     <EndorsementMonthwise
-                        successColorShade={successColorShade}
+                        successColorShade={colors.primary.main}
                         labelColor={labelColor}
                         tooltipShadow={tooltipShadow}
                         gridLineColor={gridLineColor}
