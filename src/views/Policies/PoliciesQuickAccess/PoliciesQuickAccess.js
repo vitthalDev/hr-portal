@@ -223,7 +223,7 @@ function PoliciesQuickAccess(props) {
                                 Cancel
                             </Button>{' '}
                             <Button color='flat-primary' outline onClick={() => setRequestPolicies(!requestPolicies)}>
-                                Download
+                                Submit
                             </Button>{' '}
                         </ModalFooter>
                     </Modal>

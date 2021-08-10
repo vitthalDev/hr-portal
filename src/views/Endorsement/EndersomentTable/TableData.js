@@ -27,12 +27,16 @@ const EndorsementTableData = () => {
               5645644464
             </Link>
           </td>
-          <td>Paid</td>
+          <td>
+            <Link to='/dashboard/endorsement/newendorsement' style={{ color: '#9B9B9B' }}>
+              Paid
+            </Link>
+          </td>
           <td>Rahul Sharma</td>
           <td>29 Jan 2021</td>
           <td>Address Change</td>
           <td>
-            <Badge color='info' pill className='badge'>
+            <Badge color='info' pill className='badge' >
               Accepted
             </Badge>
           </td>
