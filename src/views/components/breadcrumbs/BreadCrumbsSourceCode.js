@@ -11,7 +11,7 @@ const BreadcrumbsDefault = () => {
     <React.Fragment>
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link to='#'> Home </Link>
+          <Link to='#'> Dashboard </Link>
         </BreadcrumbItem>
         <BreadcrumbItem>
           <Link to='#'> Library </Link>

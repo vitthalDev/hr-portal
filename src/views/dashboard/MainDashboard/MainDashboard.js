@@ -77,7 +77,7 @@ function MainDashboard(props) {
                 </Fragment>
             </Row> */}
 
-            <Row>
+            <Row className='mt-1' >
                 <Col lg='3' sm='4'>
                     <Card>
                         <CardBody>
@@ -151,15 +151,15 @@ function MainDashboard(props) {
                             <Row>
                                 <Col lg='3'>
                                     <Row className=' d-flex align-items-center justify-content-center'>
-                                        <Col lg='12'>
-                                            <div >
+                                        <Col lg='12' style={{ paddingBottom: 10 }}>
+                                            <div style={{ marginTop: -10 }} >
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 1</span>
                                             </div>
                                             <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
-                                                <img src={male1} style={{ height: 25, width: 10 }} /><small style={{ color: '#0AC9C4', paddingLeft: 5 }}>40</small>
-                                                <img src={female1} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#34A3EC', paddingLeft: 5 }}>20</small>
+                                                <img src={male1} style={{ height: 25, width: 10 }} /><small style={{ color: '#0AC9C4', paddingLeft: 5, fontSize: 15 }}>40</small>
+                                                <img src={female1} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#34A3EC', paddingLeft: 5, fontSize: 15 }}>20</small>
                                             </div>
-                                            <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
+                                            <div style={{ width: 100, height: 50, marginTop: -70, marginLeft: 70 }}>
                                                 <PlanOne
                                                     primary='#0AC9C4'
                                                     warning='#34A3EC'
@@ -179,15 +179,15 @@ function MainDashboard(props) {
                                 <Col lg='3'>
                                     <Row className=' d-flex align-items-center justify-content-center'>
                                         <Col lg='12' >
-                                            <div>
-                                                <span style={{ color: '#8598AD' }}>Policy Plan 2</span>
+                                            <div style={{ marginTop: -10 }} >
+                                                <span style={{ color: '#8598AD' }}>Policy Plan 1</span>
                                             </div>
                                             <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
-                                                <img src={male2} style={{ height: 25, width: 10 }} /><small style={{ color: '#FF730C', paddingLeft: 5 }}>23</small>
-                                                <img src={female2} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#FCBF55', paddingLeft: 5 }}>20</small>
+                                                <img src={male2} style={{ height: 25, width: 10 }} /><small style={{ color: '#FF730C', paddingLeft: 5, fontSize: 15 }}>40</small>
+                                                <img src={female2} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#FCBF55', paddingLeft: 5, fontSize: 15 }}>20</small>
                                             </div>
-                                            <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
-                                                <PlanTwo
+                                            <div style={{ width: 100, height: 50, marginTop: -70, marginLeft: 70 }}>
+                                                <PlanOne
                                                     primary='#FF730C'
                                                     warning='#FCBF55'
                                                 />
@@ -206,14 +206,14 @@ function MainDashboard(props) {
                                 <Col lg='3'>
                                     <Row className=' d-flex align-items-center justify-content-center'>
                                         <Col lg='12'>
-                                            <div>
+                                            <div style={{ marginTop: -10 }}>
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 3</span>
                                             </div>
-                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
-                                                <img src={male3} style={{ height: 25, width: 10 }} /><small style={{ color: '#009EFF', paddingLeft: 5 }}>18</small>
-                                                <img src={female3} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#00F1FF', paddingLeft: 5 }}>10</small>
+                                            <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0, paddingBottom: 0 }}>
+                                                <img src={male3} style={{ height: 25, width: 10 }} /><small style={{ color: '#009EFF', paddingLeft: 5, fontSize: 15 }}>18</small>
+                                                <img src={female3} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#00F1FF', paddingLeft: 5, fontSize: 15 }}>10</small>
                                             </div>
-                                            <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
+                                            <div style={{ width: 100, height: 50, marginTop: -70, marginLeft: 70 }}>
                                                 <PlanThree
                                                     primary='#009EFF'
                                                     warning='#00F1FF'
@@ -233,14 +233,14 @@ function MainDashboard(props) {
                                 <Col lg='3'>
                                     <Row className=' d-flex align-items-center justify-content-center'>
                                         <Col lg='12'>
-                                            <div>
+                                            <div style={{ marginTop: -10 }}>
                                                 <span style={{ color: '#8598AD' }}>Policy Plan 4</span>
                                             </div>
                                             <div className='d-flex justify-content-space-between ' style={{ paddingLeft: 0 }}>
-                                                <img src={male4} style={{ height: 25, width: 10 }} /><small style={{ color: '#8A44FF', paddingLeft: 5 }}>10</small>
-                                                <img src={female4} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#E19BFF', paddingLeft: 5 }}>05</small>
+                                                <img src={male4} style={{ height: 25, width: 10 }} /><small style={{ color: '#8A44FF', paddingLeft: 5, fontSize: 15 }}>10</small>
+                                                <img src={female4} style={{ height: 25, width: 10, marginLeft: 10 }} /><small style={{ color: '#E19BFF', paddingLeft: 5, fontSize: 15 }}>05</small>
                                             </div>
-                                            <div style={{ width: 100, height: 50, marginTop: -65, marginLeft: 65 }}>
+                                            <div style={{ width: 100, height: 50, marginTop: -70, marginLeft: 70 }}>
                                                 <PlanFour
                                                     primary='#8A44FF'
                                                     warning='#E19BFF'

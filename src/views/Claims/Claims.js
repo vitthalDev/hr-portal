@@ -1,19 +1,32 @@
 import React from 'react'
 import Breadcrumbs from '@components/breadcrumbs'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label } from 'reactstrap'
+import { Row, Col, Card, CardHeader, CardTitle, CardBody, Form, FormGroup, Input, Label, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 import { Calendar } from 'react-feather'
+import { Link } from 'react-router-dom'
 import ActiveAdmissions from './ActiveAdmissions/ActiveAdmissions'
 import PastClaims from './PastClaims/PastClaims'
 import Analysis from './Analysis/Analysis'
+import grid from '@src/assets/images/icons/grid.png'
 
 function Claims(props) {
     const [active, setActive] = React.useState("activeAdmissions")
     return (
         <>
-            <Breadcrumbs breadCrumbTitle='Endorsement' breadCrumbParent='Claims' />
+            <div style={{ marginLeft: 5 }}>
+                <React.Fragment>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <Link to='/'> <img src={grid} height='20' width='20' /> </Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active >
+                            <span>Claims</span>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </React.Fragment>
+            </div>
 
             <div className="row text-center" style={{ height: 45 }}>
-                <div className="col-lg-2">
+                <div className="col-lg-2 ml-1 mt-1">
                     <div
                         className={
                             active === "activeAdmissions" ? "text-primary" : "text-black"
@@ -34,7 +47,7 @@ function Claims(props) {
                         )}
                     </div>
                 </div>
-                <div className="col-lg-2">
+                <div className="col-lg-2 mt-1">
                     <div
                         className={active === "pastClaims" ? "text-primary" : "text-black"}
                         onClick={(e) => {
@@ -53,7 +66,7 @@ function Claims(props) {
                         )}
                     </div>
                 </div>
-                <div className="col-lg-2">
+                <div className="col-lg-2 mt-1 mb-1">
                     <div
                         className={active === "analysis" ? "text-primary" : "text-black"}
                         onClick={(e) => {

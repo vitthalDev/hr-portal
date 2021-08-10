@@ -107,7 +107,7 @@ const ActiveAdmissions = () => {
                 <Chart options={options} series={series} type='donut' height={300} />
                 <div className='d-flex justify-content-between mb-1'>
                     <div className='d-flex align-items-center'>
-                        <Square size={15} className='bg-light-primary' />
+                        <Square size={15} style={{ color: '#7367F0', backgroundColor: '#7367F0' }} />
                         <span className='font-weight-bold ml-75 mr-25'>Employees</span>
                     </div>
                     <div>
@@ -116,7 +116,7 @@ const ActiveAdmissions = () => {
                 </div>
                 <div className='d-flex justify-content-between mb-1'>
                     <div className='d-flex align-items-center'>
-                        <Square size={15} className='bg-light-warning' />
+                        <Square size={15} style={{ color: '#FFCE76', backgroundColor: '#FFCE76' }} />
                         <span className='font-weight-bold ml-75 mr-25'>Spouse</span>
                     </div>
                     <div>
@@ -125,7 +125,7 @@ const ActiveAdmissions = () => {
                 </div>
                 <div className='d-flex justify-content-between mb-1'>
                     <div className='d-flex align-items-center'>
-                        <Square size={15} className='bg-light-danger' />
+                        <Square size={15} style={{ color: '#FF8585', backgroundColor: '#FF8585' }} />
                         <span className='font-weight-bold ml-75 mr-25'>Children</span>
                     </div>
                     <div>
@@ -134,7 +134,7 @@ const ActiveAdmissions = () => {
                 </div>
                 <div className='d-flex justify-content-between mb-1'>
                     <div className='d-flex align-items-center'>
-                        <Square size={15} className='bg-light-success' />
+                        <Square size={15} style={{ color: '#65FA9E', backgroundColor: '#65FA9E' }} />
                         <span className='font-weight-bold ml-75 mr-25'>Parents</span>
                     </div>
                     <div>

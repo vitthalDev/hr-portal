@@ -1,14 +1,31 @@
 import React from 'react'
 import Cleave from 'cleave.js/react'
-import { Row, Col, Card, CardHeader, CardTitle, CardBody, CardText, FormGroup, Input, Form, Button, Label, CustomInput } from 'reactstrap'
+import { Row, Col, Card, CardHeader, CardTitle, CardBody, CardText, FormGroup, Input, Form, Button, Label, CustomInput, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 import phonePe from '@src/assets/images/icons/phonePe.png'
+import { Link } from 'react-router-dom'
 import gpay from '@src/assets/images/icons/gpay.png'
 import bhim from '@src/assets/images/icons/bhim.png'
 import PayPal from '@src/assets/images/icons/PayPal.png'
+import grid from '@src/assets/images/icons/grid.png'
 
 function PlanDetails(props) {
     return (
         <>
+            <div className='mt-1 mb-1'>
+                <React.Fragment>
+                    <Breadcrumb>
+                        <BreadcrumbItem>
+                            <Link to='/'> <img src={grid} height='20' width='20' /> </Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem >
+                            <Link to='/dashboard/policies'>Policies</Link>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem active >
+                            <span>Payment</span>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </React.Fragment>
+            </div>
             <Card className='invoice-preview-card'>
                 <CardHeader>
                     <h1>Checkout</h1>
